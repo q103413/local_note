@@ -1,8 +1,4 @@
-[Skip to end of metadata](https://wiki.60889.xyz:8568/confluence/pages/viewpage.action?pageId=36143373#page-metadata-end)
 
-- 由 [Maple](https://wiki.60889.xyz:8568/confluence/display/~maple)创建, 最后修改于[五月 22, 2023](https://wiki.60889.xyz:8568/confluence/pages/diffpagesbyversion.action?pageId=36143373&selectedPageVersions=8&selectedPageVersions=9)
-
-[Go to start of metadata](https://wiki.60889.xyz:8568/confluence/pages/viewpage.action?pageId=36143373#page-metadata-start)
 
 # 一、配置
 
@@ -10,7 +6,7 @@
 
 ### 1-1、创建数据源
 
-![image-20230619212438660](C:\Users\Admins\AppData\Roaming\Typora\typora-user-images\image-20230619212438660.png)
+<img src="./image-20230619213723787.png" alt="image-20230619213723787" style="zoom:33%;" />
 
 重点名词释义:
 
@@ -20,7 +16,7 @@
 
 ### 1-2、编辑数据源
 
-<img src="https://next.yearning.io/images/flowtarget.png" alt="img" style="zoom: 33%;" />
+<img src="https://next.yearning.io/images/flowtarget.png" alt="img" style="zoom: 25%;" />
 
 重点名词释义:
 
@@ -31,7 +27,7 @@
 
 ### 2-1、创建用户
 
-![image-20230619212517047](C:\Users\Admins\AppData\Roaming\Typora\typora-user-images\image-20230619212517047.png)
+<img src="./image-20230619213749786.png" alt="image-20230619213749786" style="zoom:33%;" />
 
 ### 2-2、编辑用户
 
@@ -45,7 +41,7 @@
 
 ### 2-3、用户赋权
 
-![image-20230619212555534](C:\Users\Admins\AppData\Roaming\Typora\typora-user-images\image-20230619212555534.png)
+<img src="./image-20230619213812587.png" alt="image-20230619213812587" style="zoom:33%;" />
 
 点击权限按钮即可对该用户进行赋权。可以同时将多个权限组赋予用户，用户的权限将根据所赋予的1个或多个权限组权限计算并去重后获得。
 
@@ -53,7 +49,7 @@
 
 权限组内权限共分为DDL权限(表结构修改)，DML权限（表数据变更），Query权限（查询）共三大类。
 
-![image-20230619212620253](C:\Users\Admins\AppData\Roaming\Typora\typora-user-images\image-20230619212620253.png)
+<img src="./image-20230619213841929.png" alt="image-20230619213841929" style="zoom:33%;" />
 
 TIP
 
@@ -71,7 +67,7 @@ TIP
 
 **Yearning 最多支持7层的审核流程，但必须注意的是流程的开头必然是提交人阶段，流程的结束必然是执行阶段。否则将会导致流程错乱！**
 
-![image-20230619212643820](C:\Users\Admins\AppData\Roaming\Typora\typora-user-images\image-20230619212643820.png)
+<img src="./image-20230619213910501.png" alt="image-20230619213910501" style="zoom:33%;" />
 
 名词释义:
 
@@ -91,7 +87,7 @@ TIP
 
 创建完流程后，在 管理->数据源 处找到需要赋予流程的数据源，将流程添加到该数据源中并点击保存。
 
-<img src="https://next.yearning.io/images/flowtarget.png" alt="img" style="zoom:33%;" />
+<img src="https://next.yearning.io/images/flowtarget.png" alt="img" style="zoom: 25%;" />
 
 TIP
 
@@ -105,11 +101,11 @@ TIP
 
 点击工单申请页面，根据实际提单需求选择DML/DDL/Query中的某一类进行工单提交。
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_13-11-0.png?version=1&modificationDate=1684736413105&api=v2)
+<img src="./image-20230619213240805.png" alt="image-20230619213240805" style="zoom:33%;" />
 
 点击对应数据源卡片进入工单提交页面
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_13-16-4.png?version=1&modificationDate=1684736413054&api=v2)
+<img src="./image-20230619213311528.png" alt="image-20230619213311528" style="zoom:33%;" />
 
 布局介绍
 
@@ -132,9 +128,9 @@ TIP
 
 进入 审核->工单 页面选择需要审批的工单点击详情按钮进入该工单审核详情页
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_13-45-45.png?version=1&modificationDate=1684737944862&api=v2)
+<img src="./image-20230619213608822.png" alt="image-20230619213608822" style="zoom:33%;" />
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_13-55-23.png?version=1&modificationDate=1684738522607&api=v2)
+<img src="./image-20230619213630583.png" alt="image-20230619213630583" style="zoom:33%;" />
 
 布局介绍
 
@@ -156,7 +152,7 @@ TIP
 
 ### 1-3、回滚工单生成
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_13-44-30.png?version=1&modificationDate=1684737869483&api=v2)
+<img src="./image-20230619213539710.png" alt="image-20230619213539710" style="zoom:33%;" />
 
 工单执行成功且开启生成回滚语句时，如需对执行的SQL进行回滚操作
 
@@ -176,11 +172,11 @@ TIP
 
 点击工单申请页面，选择Query类进行查询。
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_14-12-47.png?version=1&modificationDate=1684739566429&api=v2)
+<img src="./image-20230619213453501.png" alt="image-20230619213453501" style="zoom:33%;" />
 
 如开启查询审核功能将进入如下界面：
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_14-38-32.png?version=1&modificationDate=1684741111248&api=v2)
+<img src="./image-20230619213511798.png" alt="image-20230619213511798" style="zoom:33%;" />
 
 TIP
 
@@ -192,7 +188,7 @@ TIP
 
 ##### **查询界面**
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_14-17-24.png?version=1&modificationDate=1684739843922&api=v2)
+<img src="./image-20230619213418307.png" alt="image-20230619213418307" style="zoom:33%;" />
 
 ### 2-2、审核
 
@@ -200,13 +196,13 @@ TIP
 
 数据源负责人通过 审核 -> 查询 页面查看需要审核的查询工单(未开启查询审核时工单将自动批准)
 
-<img src="https://next.yearning.io/images/query07.png" alt="img" style="zoom:50%;" />
+<img src="https://next.yearning.io/images/query07.png" alt="img" style="zoom: 25%;" />
 
 ##### 查询详情
 
 点击对应查询工单详情按钮后进入，可查看该工单的基本信息以及执行的SQL语句。
 
-![img](https://next.yearning.io/images/query08.png)
+<img src="https://next.yearning.io/images/query08.png" alt="img" style="zoom: 25%;" />
 
 
 
@@ -219,4 +215,4 @@ TIP
 1. 赋予审计用户审计人角色(用户页面)
 2. 审计用户重新登录后即可在导航栏处看到审计栏
 
-![img](https://wiki.60889.xyz:8568/confluence/download/attachments/36143373/image2023-5-22_14-11-19.png?version=1&modificationDate=1684739478486&api=v2)
+<img src="./image-20230619213353526.png" alt="image-20230619213353526" style="zoom:33%;" />
