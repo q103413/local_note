@@ -1,9 +1,26 @@
 {
-  "plugins": ["auto-scroll-table","splitter","edit-link"],
-   "pluginsConfig": {
+  "plugins": ["auto-scroll-table","splitter","edit-link","anchor-navigation-ex",
+    "back-to-top-button",  "popup",
+    "prism", "-highlight",
+    "livereload", "-lunr", "-search", "search-pro"],
+    "pluginsConfig": {
       "edit-link": {
             "base": "https://github.com/q103413/local_note/blob/main",
             "label": "编辑此页面"
-       }
+       }, 
+        "anchor-navigation-ex": {
+           "showLevel": false, 
+           "showGoTop": false 
+        },
+        "prism": {
+            "css": [
+              "prismjs/themes/prism-okaidia.css"
+            ],
+            "lang": {
+              "shell": "python"
+            }
+      }
     }
+
+    
 }

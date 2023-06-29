@@ -25,11 +25,19 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
                 
             
                 
@@ -68,7 +76,7 @@
     <link rel="next" href="jenkins部署.html" />
     
     
-    <link rel="prev" href="Linux命令笔记.html" />
+    <link rel="prev" href="OpenIM服务端部署文档v1.0.8.html" />
     
 
     </head>
@@ -110,12 +118,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="Linux命令笔记.html">
+        <li class="chapter " data-level="1.2" data-path="OpenIM服务端部署文档v1.0.8.html">
             
-                <a href="Linux命令笔记.html">
+                <a href="OpenIM服务端部署文档v1.0.8.html">
             
                     
-                    Linux命令笔记
+                    OpenIM服务端部署文档v1.0.8
             
                 </a>
             
@@ -142,6 +150,32 @@
             
                     
                     jenkins部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="linux命令笔记.html">
+            
+                <a href="linux命令笔记.html">
+            
+                    
+                    linux命令笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Yeaning使用文档.html">
+            
+                <a href="Yeaning使用文档.html">
+            
+                    
+                    Yeaning使用文档
             
                 </a>
             
@@ -194,74 +228,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7528;nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;">&#x7528;Nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7528;nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;"><b></b>&#x7528;Nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;"><b></b>&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><b></b>&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><b></b>&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x52A0;--&#x4E0E;&#x4E0D;&#x52A0;-"><b></b>&#x52A0; / &#x4E0E;&#x4E0D;&#x52A0; /</a></li><li><span class="title-icon "></span><a href="#nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;"><b></b>nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x610F;"><b></b>&#x6CE8;&#x610F;:</a></li></ul></ul><li><span class="title-icon "></span><a href="#nginx-301&#x91CD;&#x5B9A;&#x5411;-&#x8BBE;&#x7F6E;"><b></b>nginx 301&#x91CD;&#x5B9A;&#x5411; &#x8BBE;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;"><b></b>http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;</a></li></ul></ul></div><h1 id="&#x7528;nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;"><a name="&#x7528;nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x7528;nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;Nginx&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF08;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF09;</h1>
 <p>&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E9B;java&#x6216;node&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x53C8;&#x4E0D;&#x60F3;&#x8BA9;&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;</p>
 <p>&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;Nginx&#x5982;&#x4F55;&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF0C;&#x8FD8;&#x6709;&#x5404;&#x79CD;&#x8F6C;&#x53D1;&#x89C4;&#x5219;</p>
-<h2 id="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;">&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;</h2>
+<h2 id="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;"><a name="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x53E3;</h2>
 <p>&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x6700;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x4E0A;</p>
-<pre><code class="lang-shell">server{
-  listen 80;
-  server_name  tomcat.shaochenfeng.com;
-  index  index.php index.html index.htm;
+<pre class="language-"><code class="lang-shell">server<span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name  tomcat<span class="token punctuation">.</span>shaochenfeng<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
+  index  index<span class="token punctuation">.</span>php index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
 
-  location / {
-    proxy_pass  http://127.0.0.1:8080; # &#x8F6C;&#x53D1;&#x89C4;&#x5219;
-    proxy_set_header Host $proxy_host; # &#x4FEE;&#x6539;&#x8F6C;&#x53D1;&#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x8BA9;8080&#x7AEF;&#x53E3;&#x7684;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x53D7;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x8BF7;&#x6C42;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  }
-}
+  location <span class="token operator">/</span> <span class="token punctuation">{</span>
+    proxy_pass  http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8080</span><span class="token punctuation">;</span> <span class="token comment"># &#x8F6C;&#x53D1;&#x89C4;&#x5219;</span>
+    proxy_set_header Host $proxy_host<span class="token punctuation">;</span> <span class="token comment"># &#x4FEE;&#x6539;&#x8F6C;&#x53D1;&#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x8BA9;8080&#x7AEF;&#x53E3;&#x7684;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x53D7;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x8BF7;&#x6C42;</span>
+    proxy_set_header X<span class="token operator">-</span>Real<span class="token operator">-</span>IP $remote_addr<span class="token punctuation">;</span>
+    proxy_set_header X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For $proxy_add_x_forwarded_for<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD9;&#x6837;&#x8BBF;&#x95EE; <a href="http://tomcat.shaochenfeng.com" target="_blank">http://tomcat.shaochenfeng.com</a> &#x65F6;&#x5C31;&#x4F1A;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7684; 8080 &#x7AEF;&#x53E3;</p>
-<h2 id="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;">&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</h2>
-<pre><code class="lang-shell">server{
-  listen 80;
-  server_name  baidu.shaochenfeng.com;
-  index  index.php index.html index.htm;
+<h2 id="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><a name="&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C06;&#x57DF;&#x540D;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</h2>
+<pre class="language-"><code class="lang-shell">server<span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name  baidu<span class="token punctuation">.</span>shaochenfeng<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
+  index  index<span class="token punctuation">.</span>php index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
 
-  location / {
-    proxy_pass  http://www.baidu.com;
-    proxy_set_header Host $proxy_host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  }
-}
+  location <span class="token operator">/</span> <span class="token punctuation">{</span>
+    proxy_pass  http<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
+    proxy_set_header Host $proxy_host<span class="token punctuation">;</span>
+    proxy_set_header X<span class="token operator">-</span>Real<span class="token operator">-</span>IP $remote_addr<span class="token punctuation">;</span>
+    proxy_set_header X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For $proxy_add_x_forwarded_for<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD9;&#x6837;&#x8BBF;&#x95EE; <a href="http://baidu.shaochenfeng.com" target="_blank">http://baidu.shaochenfeng.com</a> &#x65F6;&#x5C31;&#x4F1A;&#x8F6C;&#x53D1;&#x5230; <a href="http://www.baidu.com" target="_blank">http://www.baidu.com</a></p>
-<h2 id="&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;">&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</h2>
-<pre><code class="lang-shell">server{
-  listen 80;
-  server_name 127.0.0.1; # &#x516C;&#x7F51;ip
-  index  index.php index.html index.htm;
+<h2 id="&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><a name="&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x6216;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x540D;</h2>
+<pre class="language-"><code class="lang-shell">server<span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">;</span> <span class="token comment"># &#x516C;&#x7F51;ip</span>
+  index  index<span class="token punctuation">.</span>php index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
 
-  location / {
-    proxy_pass  http://127.0.0.1:8080; # &#x6216; http://www.baidu.com
-    proxy_set_header Host $proxy_host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  }
-}
+  location <span class="token operator">/</span> <span class="token punctuation">{</span>
+    proxy_pass  http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8080</span><span class="token punctuation">;</span> <span class="token comment"># &#x6216; http://www.baidu.com</span>
+    proxy_set_header Host $proxy_host<span class="token punctuation">;</span>
+    proxy_set_header X<span class="token operator">-</span>Real<span class="token operator">-</span>IP $remote_addr<span class="token punctuation">;</span>
+    proxy_set_header X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For $proxy_add_x_forwarded_for<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD9;&#x6837;&#x8BBF;&#x95EE; <a href="http://127.0.0.1" target="_blank">http://127.0.0.1</a> &#x65F6;&#x5C31;&#x4F1A;&#x8F6C;&#x53D1;&#x5230;&#x672C;&#x5730;&#x7684; 8080 &#x7AEF;&#x53E3;&#x6216; <a href="http://www.baidu.com" target="_blank">http://www.baidu.com</a></p>
-<h2 id="&#x52A0;--&#x4E0E;&#x4E0D;&#x52A0;-">&#x52A0; / &#x4E0E;&#x4E0D;&#x52A0; /</h2>
+<h2 id="&#x52A0;--&#x4E0E;&#x4E0D;&#x52A0;-"><a name="&#x52A0;--&#x4E0E;&#x4E0D;&#x52A0;-" class="anchor-navigation-ex-anchor" href="#&#x52A0;--&#x4E0E;&#x4E0D;&#x52A0;-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A0; / &#x4E0E;&#x4E0D;&#x52A0; /</h2>
 <p>&#x5728;&#x914D;&#x7F6E;proxy_pass&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x9762;&#x7684;url&#x52A0;/&#xFF0C;&#x8868;&#x793A;&#x7EDD;&#x5BF9;&#x6839;&#x8DEF;&#x5F84;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;/&#xFF0C;&#x8868;&#x793A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</p>
 <p>&#x4F8B;&#x5982;</p>
 <ol>
 <li>&#x52A0; /</li>
 </ol>
-<pre><code>server_name shaochenfeng.com
+<pre class="language-"><code>server_name shaochenfeng.com
 location /data/ {
     proxy_pass http://127.0.0.1/;
 }
 </code></pre><p>&#x8BBF;&#x95EE; <a href="http://shaochenfeng.com/data/index.html" target="_blank">http://shaochenfeng.com/data/index.html</a> &#x4F1A;&#x8F6C;&#x53D1;&#x5230; <a href="http://127.0.0.1/index.html" target="_blank">http://127.0.0.1/index.html</a></p>
 <p>&#x4E0D;&#x52A0; /</p>
-<pre><code>server_name shaochenfeng.com
+<pre class="language-"><code>server_name shaochenfeng.com
 location /data/ {
     proxy_pass http://127.0.0.1;
 }
 </code></pre><p>&#x8BBF;&#x95EE; <a href="http://shaochenfeng.com/data/index.html" target="_blank">http://shaochenfeng.com/data/index.html</a> &#x4F1A;&#x8F6C;&#x53D1;&#x5230; <a href="http://127.0.0.1/data/index.ht" target="_blank">http://127.0.0.1/data/index.ht</a></p>
-<h2 id="nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;">nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;</h2>
-<pre><code>server {
+<h2 id="nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;"><a name="nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>nginx&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;80&#x7684;&#x914D;&#x7F6E;</h2>
+<pre class="language-"><code>server {
     listen       80;
     server_name  xx.cn;  #&#x57DF;&#x540D;1
 
@@ -280,11 +314,11 @@ server {
      }
 
  }
-</code></pre><h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;:</h3>
+</code></pre><h3 id="&#x6CE8;&#x610F;"><a name="&#x6CE8;&#x610F;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;:</h3>
 <p><strong>&#x4FE9;&#x4E2A;server&#x670D;&#x52A1;&#x8981;&#x76F8;&#x5BF9;&#x72EC;&#x7ACB;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5C06;&#x670D;&#x52A1;1&#x548C;&#x670D;&#x52A1;2&#x7684;&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#x5230;80&#x7AEF;&#x53E3;&#x4E86;</strong></p>
-<h1 id="nginx-301&#x91CD;&#x5B9A;&#x5411;-&#x8BBE;&#x7F6E;">nginx 301&#x91CD;&#x5B9A;&#x5411; &#x8BBE;&#x7F6E;</h1>
+<h1 id="nginx-301&#x91CD;&#x5B9A;&#x5411;-&#x8BBE;&#x7F6E;"><a name="nginx-301&#x91CD;&#x5B9A;&#x5411;-&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#nginx-301&#x91CD;&#x5B9A;&#x5411;-&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>nginx 301&#x91CD;&#x5B9A;&#x5411; &#x8BBE;&#x7F6E;</h1>
 <p>&#x5728;nginx&#x4E2D;&#x914D;&#x7F6E;&#xFF0C;&#x4F7F;&#x5F97;&#x8BBF;&#x95EE;&#x4E0D;&#x5E26;www&#x7684;&#x7F51;&#x5740;&#x81EA;&#x52A8;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x5E26;www&#x7684;&#x57DF;&#x540D;&#x3002;</p>
-<h2 id="http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;">http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;</h2>
+<h2 id="http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;"><a name="http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;" class="anchor-navigation-ex-anchor" href="#http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;"><i class="fa fa-link" aria-hidden="true"></i></a>http&#x534F;&#x8BAE;&#x7684;&#x91CD;&#x5B9A;&#x5411;</h2>
 <p>&#x5728;<a href="https://link.jianshu.com/?t=http://nginx.org/en/docs/http/converting_rewrite_rules.html" target="_blank">nginx&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x4E2D;&#x6709;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
 <table>
 <thead>
@@ -346,6 +380,7 @@ server {
 </tbody>
 </table>
 
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -372,7 +407,7 @@ server {
 
             
                 
-                <a href="Linux命令笔记.html" class="navigation navigation-prev " aria-label="Previous page: Linux命令笔记">
+                <a href="OpenIM服务端部署文档v1.0.8.html" class="navigation navigation-prev " aria-label="Previous page: OpenIM服务端部署文档v1.0.8">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -388,7 +423,7 @@ server {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Nginx常用配置","level":"1.3","depth":1,"next":{"title":"jenkins部署","level":"1.4","depth":1,"path":"jenkins部署.md","ref":"jenkins部署.md","articles":[]},"previous":{"title":"Linux命令笔记","level":"1.2","depth":1,"path":"Linux命令笔记.md","ref":"Linux命令笔记.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["auto-scroll-table","splitter","edit-link","livereload"],"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"auto-scroll-table":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/q103413/local_note/blob/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Nginx常用配置.md","mtime":"2023-06-11T17:35:20.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-29T11:16:00.873Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nginx常用配置","level":"1.3","depth":1,"next":{"title":"jenkins部署","level":"1.4","depth":1,"path":"jenkins部署.md","ref":"jenkins部署.md","articles":[]},"previous":{"title":"OpenIM服务端部署文档v1.0.8","level":"1.2","depth":1,"path":"OpenIM服务端部署文档v1.0.8.md","ref":"OpenIM服务端部署文档v1.0.8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["auto-scroll-table","splitter","edit-link","anchor-navigation-ex","back-to-top-button","popup","prism","-highlight","livereload","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"python"}},"livereload":{},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/q103413/local_note/blob/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Nginx常用配置.md","mtime":"2023-06-11T17:35:20.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-29T17:15:26.092Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -410,23 +445,19 @@ server {
         
     
         
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
         <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         

@@ -6,7 +6,7 @@
 
 ### 1-1、创建数据源
 
-<img src="./image-20230619213723787.png" alt="image-20230619213723787" style="zoom:33%;" />
+<img src="./assets/image-20230619213723787.png" alt="image-20230619213723787" style="zoom:33%;" />
 
 重点名词释义:
 
@@ -27,7 +27,7 @@
 
 ### 2-1、创建用户
 
-<img src="./image-20230619213749786.png" alt="image-20230619213749786" style="zoom:33%;" />
+<img src="./assets/image-20230619213749786.png" alt="image-20230619213749786" style="zoom:33%;" />
 
 ### 2-2、编辑用户
 
@@ -41,7 +41,7 @@
 
 ### 2-3、用户赋权
 
-<img src="./image-20230619213812587.png" alt="image-20230619213812587" style="zoom:33%;" />
+<img src="./assets/image-20230619213812587.png" alt="image-20230619213812587" style="zoom:33%;" />
 
 点击权限按钮即可对该用户进行赋权。可以同时将多个权限组赋予用户，用户的权限将根据所赋予的1个或多个权限组权限计算并去重后获得。
 
@@ -49,7 +49,7 @@
 
 权限组内权限共分为DDL权限(表结构修改)，DML权限（表数据变更），Query权限（查询）共三大类。
 
-<img src="./image-20230619213841929.png" alt="image-20230619213841929" style="zoom:33%;" />
+<img src="./assets/image-20230619213841929.png" alt="image-20230619213841929" style="zoom:33%;" />
 
 TIP
 
@@ -67,7 +67,7 @@ TIP
 
 **Yearning 最多支持7层的审核流程，但必须注意的是流程的开头必然是提交人阶段，流程的结束必然是执行阶段。否则将会导致流程错乱！**
 
-<img src="./image-20230619213910501.png" alt="image-20230619213910501" style="zoom:33%;" />
+<img src="./assets/image-20230619213910501.png" alt="image-20230619213910501" style="zoom:33%;" />
 
 名词释义:
 
@@ -101,11 +101,11 @@ TIP
 
 点击工单申请页面，根据实际提单需求选择DML/DDL/Query中的某一类进行工单提交。
 
-<img src="./image-20230619213240805.png" alt="image-20230619213240805" style="zoom:33%;" />
+<img src="./assets/image-20230619213240805.png" alt="image-20230619213240805" style="zoom:33%;" />
 
 点击对应数据源卡片进入工单提交页面
 
-<img src="./image-20230619213311528.png" alt="image-20230619213311528" style="zoom:33%;" />
+<img src="./assets/image-20230619213311528.png" alt="image-20230619213311528" style="zoom:33%;" />
 
 布局介绍
 
@@ -128,9 +128,9 @@ TIP
 
 进入 审核->工单 页面选择需要审批的工单点击详情按钮进入该工单审核详情页
 
-<img src="./image-20230619213608822.png" alt="image-20230619213608822" style="zoom:33%;" />
+<img src="./assets/image-20230619213608822.png" alt="image-20230619213608822" style="zoom:33%;" />
 
-<img src="./image-20230619213630583.png" alt="image-20230619213630583" style="zoom:33%;" />
+<img src="./assets/image-20230619213630583.png" alt="image-20230619213630583" style="zoom:33%;" />
 
 布局介绍
 
@@ -152,7 +152,7 @@ TIP
 
 ### 1-3、回滚工单生成
 
-<img src="./image-20230619213539710.png" alt="image-20230619213539710" style="zoom:33%;" />
+<img src="./assets/image-20230619213539710.png" alt="image-20230619213539710" style="zoom:33%;" />
 
 工单执行成功且开启生成回滚语句时，如需对执行的SQL进行回滚操作
 
@@ -172,11 +172,11 @@ TIP
 
 点击工单申请页面，选择Query类进行查询。
 
-<img src="./image-20230619213453501.png" alt="image-20230619213453501" style="zoom:33%;" />
+<img src="./assets/image-20230619213453501.png" alt="image-20230619213453501" style="zoom:33%;" />
 
 如开启查询审核功能将进入如下界面：
 
-<img src="./image-20230619213511798.png" alt="image-20230619213511798" style="zoom:33%;" />
+<img src="./assets/image-20230619213511798.png" alt="image-20230619213511798" style="zoom:33%;" />
 
 TIP
 
@@ -188,7 +188,7 @@ TIP
 
 ##### **查询界面**
 
-<img src="./image-20230619213418307.png" alt="image-20230619213418307" style="zoom:33%;" />
+<img src="./assets/image-20230619213418307.png" alt="image-20230619213418307" style="zoom:33%;" />
 
 ### 2-2、审核
 
@@ -215,4 +215,4 @@ TIP
 1. 赋予审计用户审计人角色(用户页面)
 2. 审计用户重新登录后即可在导航栏处看到审计栏
 
-<img src="./image-20230619213353526.png" alt="image-20230619213353526" style="zoom:33%;" />
+<img src="./assets/image-20230619213353526.png" alt="image-20230619213353526" style="zoom:33%;" />

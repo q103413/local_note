@@ -734,7 +734,10 @@ scp -r build root@47.57.13.206:/data/front/pc
 2、测试环境调试+域名信息文档              100%
 
 
-
+工作日报
+2023-06-26
+1、线上问题处理                          100%
+2、测试oim-Jenkins改任务名             100%
 
 mysql -h127.0.0.1 -P3306 -usuvdata -p0buGzN5fq8VUibFtl0
 
@@ -811,3 +814,7 @@ https://qsjielkdinsjkl.com/videoGame/VerifySession
 
 
 测试iom-Jenkins修改项目名
+
+
+api.yeqian1.cn/137.220.225.67:443
+
