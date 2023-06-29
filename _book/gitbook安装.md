@@ -20,6 +20,8 @@ Node.js借助事件驱动，非阻塞I/O模型变得轻量和高效，非常适�
 
 
 
+Windows最高安装node 11
+
 # 在 Linux 下安裝 Node.js
 
 在 Linux 中的安裝方式有好幾種，請自己選擇喜歡的方式。

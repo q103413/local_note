@@ -88,10 +88,11 @@ curl
 curl -d
 
 
+
 find / -type f -name "*.log" | xargs grep "ERROR"
 find . -name "*.log" | xargs grep "error"
 
-
+find . -name "*GLIBC_2*" 
 
 一、查看 nginx 安装目录
 ps -ef | grep nginx
@@ -280,3 +281,533 @@ unlink name_or_path_of_link
 
 
   admin.156857g.com
+
+
+
+工作日报
+2023-06-16 
+1、OpenIM服务端部署文档迁移到MarkDown    已完成（100%）
+2、更新minio域名                        已完成（100%）
+3、鑫博葡京oim单机版域名信息MarkDown文档  已完成（100%）
+4、日常加域名换桶验证 已完成（100%）
+
+
+
+葡京 彩票游戏   0607
+https://games.mklsijanhy.com
+https://www.mklsijanhy.com
+
+games  www
+cname
+aeb59c84.u.fn01.vip.
+18.167.128.128:7811
+
+
+https://portal.kijsnhuamn.com
+https://www.kijsnhuamn.com
+https://games.kijsnhuamn.com
+
+18.167.128.128:7815
+葡京 彩票游戏   对应7701业务
+https://games.mklsijanhy.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+https://www.mklsijanhy.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+
+葡京 彩票游戏   对应7705业务
+https://www.kijsnhuamn.com
+https://games.kijsnhuamn.com
+
+
+
+
+永利 彩票游戏
+games-lottery   
+0531
+ga.weanhsgtfklm.com
+www.weanhsgtfklm.com
+ga  www  @
+cname
+aeb59c84.u.fn01.vip.
+永利游戏彩票备用域名
+
+17701
+17705
+17702
+https://gams.chsunamksj.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+https://app.chsunamksj.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+https://mobile.chsunamksj.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+gams    app  mobile
+cname
+aeb59c84.u.fn01.vip. 
+ 
+16.162.73.3   17701   分组  永利游戏彩票
+永利游戏彩票 非常用端口，备用地址
+https://portal.chsunamksj.com:17701/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+https://www.chsunamksj.com:17701/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+Hai (紧急事情发语音), [6/17/2023 14:15]
+16.162.73.3   17701   分组  永利游戏彩票
+永利游戏彩票 非常用端口，备用地址
+https://portal.chsunamksj.com:17701/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+https://www.chsunamksj.com:17701/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+portal    www
+cname
+aeb59c84.u.fn01.vip.
+
+https://gams.bnmcjzxhus.com  
+https://app.bnmcjzxhus.com
+https://mobile.bnmcjzxhus.com
+gams    app  mobile
+cname
+aeb59c84.u.fn01.vip.  
+16.162.73.3:17705     分组  永利游戏彩票 
+
+https://api.bnmcjzxhus.com
+https://portal.bnmcjzxhus.com
+api  portal
+cname
+aeb59c84.u.fn01.vip.
+
+https://ga.weanhsgtfklm.com
+https://www.weanhsgtfklm.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+api.edcshuankjhs.com
+api
+cname
+aeb59c84.u. fn01.vip.   
+
+/etc/nginx/nginx.conf
+nginx -s reload
+
+https://api.edcshuankjhs.com
+
+https://games.fjjfghsd.cn
+aeb59c84.u.fn01.vip.
+
+https://games.fjjfghsd.cn/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
+
+
+
+
+
+
+葡京彩票游戏域名信息-- http://doc.xfgjoa.com:18181/docs/game_lottery/game_lottery-1eqbedtmvtag7
+
+永利彩票游戏域名信息-- http://doc.xfgjoa.com:18181/docs/game_lottery/game_lottery-1eqbk5a9e0h0m
+
+
+工作日报
+2023-06-17
+1.整理彩票游戏域名信息MarkDown         已完成（100%）
+2、线上问题处理                        已完成（100%）
+3.熟悉业务                            已完成（100%）
+
+
+
+
+https://t.me/tybetter
+
+
+
+
+工作日报
+2023-06-19
+1、线上问题处理                        已完成（100%）
+2.色站测试域名信息整理MarkDown         未完成（50%）
+
+
+
+docker run -it --link red:redis --rm redis redis-cli -h redis -p 26379
+
+
+$ docker cp redis.crt redis:/usr/local/etc/redis/
+
+$ docker cp redis.key redis:/usr/local/etc/redis/
+
+
+tls-port 6379
+tls-cert-file /usr/local/etc/redis/redis.crt
+tls-key-file /usr/local/etc/redis/redis.key
+
+
+docker run --name redis -p 36379:6379 -v C:\work\redis\redis.conf:/etc/redis/redis.conf -v C:\work\redis:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+
+
+docker run --name redis -p 16379:6379 -v C:\work\redis\redis.conf:/etc/redis/redis.conf -v C:\work\redis\redis.crt:/etc/redis/redis.crt -v C:\work\redis\redis.key:/etc/redis/redis.key -v  C:\work\redis:/data -d redis redis-server /etc/redis/redis.conf
+
+
+
+
+
+# 进入上诉新建的证书存放目录
+cd /opt/redis/ssl
+# 依次执行以下命令生成证书
+openssl genrsa -out ca.key 4096
+openssl req -x509 -new -nodes -sha256 -key ca.key -days 3650 -subj '/O=Redis Test/CN=Certificate Authority' -out ca.crt
+openssl genrsa -out redis.key 2048
+openssl req -new -sha256 -key redis.key -subj '/O=Redis Test/CN=Server' | openssl x509 -req -sha256 -CA ca.crt -CAkey ca.key -CAserial ca.txt -CAcreateserial -days 365 -out redis.crt
+openssl dhparam -out redis.dh 2048
+
+
+
+
+
+redis.conf  rootCA.key  rootCA.pem  rootCA.srl  server.csr  server.key  server.pem
+
+
+/data/redistls/server.pem
+/data/redistls/server.key
+/data/redistls/rootCA.pem
+
+
+
+docker run --name redistls -p 26379:6379 -v /data/redistls/redis.conf:/etc/redis/redis.conf -v /data/redistls/rootCA.pem:/etc/redis/rootCA.pem \
+-v /data/redistls/server.pem:/etc/redis/server.pem -v /data/redistls/server.key:/etc/redis/server.key \
+-v  /data/redistls:/data -d redis redis-server /etc/redis/redis.conf
+
+
+
+
+docker run --name redistls -p 26379:6379 -v /data/redistls/redis.conf:/etc/redis/redis.conf -v /data/redistls/rootCA.pem:/etc/redis/rootCA.pem \
+-v /data/redistls/server.pem:/etc/redis/server.pem -v /data/redistls/server.key:/etc/redis/server.key \
+-v  /data/redistls:/data -d redis  /etc/redis/redis.conf
+
+
+
+Either tls-ca-cert-file or tls-ca-cert-dir must be specified w
+
+旧的
+47.57.240.128
+
+G%pZQGcsw!DwMwT7qk
+
+C8R77Jp5L3%ru8*Pv5
+
+
+echo "export LC_ALL=en_US.UTF-8"  >>  /etc/profile
+echo "export LC_CTYPE=en_US.UTF-8"  >>  /etc/profile
+
+
+# 设置语言环境
+sudo localedef -i en_US -f UTF-8 en_US.UTF-8
+# 重启宝塔面板
+bt 1
+
+
+# 卸载locales和语言包，重新安装，再执行locale-gen
+sudo apt-get purge locales
+sudo apt-get purge language-pack-en
+ 
+sudo apt-get install locales
+sudo apt-get install language-pack-en
+ 
+sudo locale-gen en_us.utf-8
+
+
+
+工作日报
+2023-06-20
+1、线上问题处理                        完成（100%）
+2.色站测试域名信息整理MarkDown         完成（100%）
+3.色站测试部署redis+TLS登陆            未完成（70%）
+4.oim测试jenkins环境node              完成（100%）
+
+2023-06-19    11:00-01:00  3小时   葡京 永利 oim 升级，服务异常排查。色站测试坏境问题分析处理，（web服务假死导致，更新后正常）
+
+
+
+
+scp root@52.69.48.80:/data/redistls/rootCA.pem  ./
+ 把192.168.0.101上的/var/www/test.txt的文件下载到/var/www/local_dir（本地目录）
+
+
+
+redis-cli --tls --cacert /c/work/redis/ssl/rootCA.pem --cert /c/work/redis/ssl/server.pem --key /c/work/redis/ssl/server.key
+
+redis-cli --tls --cacert /data/redistls/rootCA.pem --cert /data/redistls/server.pem --key /data/redistls/server.key
+
+/c/work/redis/ssl
+
+
+
+Connection: Disconnect on error: SSL Error: Openssl is missing. Please install Openssl (OpenSSL 1.1.1g  21 Apr 2020)
+
+
+
+工作日报
+2023-06-21
+1、线上问题处理            完成（100%）
+2、实现文档导航菜单       完成（100%）
+
+
+工作日报
+2023-06-22
+1、线上问题处理            完成（100%）
+2、h5域名排查               100%
+3、测试色站jenkins环境       90%
+
+
+
+export PATH=$PATH:/usr/local/jdk-11.0.1/bin:/data/node-v14.21.3-linux-x64/bin:/usr/local/maven-3.8.6/bin
+
+
+
+
+find ./ -name "*.conf" | xargs grep "10881"
+
+
+jenkins密码
+admin
+6678c4f808ac49a
+
+
+
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+npm install --force
+node -v
+npm -v
+pwd
+cd ./OpenIM-Admin-account
+npm install --force
+npm run build
+
+
+cd ./OpenIM-Electron-ToC
+npm install --force
+npm run build
+
+
+
+
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+cd ./OpenIM-Electron-ToC
+npm install --force
+npm run build
+
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+npm install --force
+cd ./OpenIM-Admin-account
+npm install --force
+npm run build
+
+
+/var/jenkins_home/workspace/OpenIM-Electron-ToC/OpenIM-Electron-ToC
+
+
+
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+cd ./OpenIM-Admin-account
+npm install --force
+npm run build
+
+
+pwd
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+cd ./OpenIM-Electron-ToC
+pwd
+npm install --force
+npm run build:main
+
+
+/var/jenkins_home/workspace/OpenIM-Electron-ToC/OpenIM-Admin-account/dist
+
+npm cache clear --force
+rm -rf node_modules
+
+
+npm cache clear --force
+rm -rf node_modules
+rm -rf  package-lock.json
+cd ./OpenIM-Admin-account
+npm install --force
+npm run build
+
+
+cd /data/jenkins_home/workspace/testtoc/OpenIM-Electron-ToC
+
+
+
+
+ssh -t -t root@52.69.48.80 "cp -rf /data/testadmin/dist /data/testadmin/backfile/testadmin_`date +%F_%H:%M:%S`"
+rsync -avz --delete --exclude 'public/*' --exclude 'runtime/*' --exclude '.env' ./. root@13.215.58.44:/data/testadmin
+ssh -t -t root@52.69.48.80 "chown -R nginx:nginx /data/testadmin/dist"
+
+
+
+ssh -t -t root@47.57.13.206 "cp -rf /data/front/testadmin /data/front/backfile/admin_`date +%F_%H:%M:%S`"
+
+ssh -t -t root@47.57.13.206 "cp -rf /data/front/testadmin /data/front/backfile/admin_`date +%F_%H:%M:%S`"
+scp -r dist  root@47.57.13.206:/data/front/testadmin
+
+rsync -avz --delete  ./dist/. root@47.57.13.206:/data/front/testadmin
+
+ssh -t -t root@47.57.13.206 "chown -R nginx:nginx /data/front/testadmin"
+
+
+
+cd ./OpenIM-Admin-account
+npm run build
+
+47.57.13.206
+
+
+ssh-copy-id root@目标节点IP（需要输入对应服务器密码）
+ssh-copy-id root@47.57.13.206 
+
+
+docker exec -it xxx /bin/bash
+
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
+
+ssh-copy-id root@47.57.13.206 
+
+
+ssh-keygen
+ ssh-copy-id root@47.57.13.206 
+
+gTXUdvrj5Q$DUVrPTx
+
+ssh 47.57.13.206 
+
+
+scp ./1.log  root@47.57.13.206:/data/front/testadmin
+
+
+
+ssh -t -t root@47.57.13.206 "mv /data/front/testadmin /data/front/backfile/admin_`date +%F_%H:%M:%S`"
+scp -r dist root@47.57.13.206:/data/front/testadmin
+ssh -t -t root@47.57.13.206 "chown -R nginx:nginx /data/front/testadmin"
+ssh -t -t root@47.57.13.206 "cd /data/front & ls"
+
+
+
+
+
+cd ./OpenIM-Admin-account
+npm run build
+ssh -t -t root@47.57.13.206 "mv /data/front/admin /data/front/backfile/admin_`date +%F_%H:%M:%S`"
+scp -r dist root@47.57.13.206:/data/front/admin
+
+
+cd ./OpenIM-Electron-ToC
+npm run build:renderer
+ssh -t -t root@47.57.13.206 "mv /data/front/pc /data/front/backfile/pc_`date +%F_%H:%M:%S`"
+scp -r build root@47.57.13.206:/data/front/pc
+
+
+
+
+
+工作日报
+2023-06-23
+1、线上问题处理            完成（100%）
+2、oim-test-jenkins部署       100%
+
+
+47.57.13.206
+
+
+工作日报
+2023-06-25
+1、线上问题处理              100%
+2、色站测试域名信息文档       100%
+2、oim测试域名信息文档        90%
+
+
+
+工作日报
+2023-06-26
+1、线上问题处理                          100%
+2、测试环境调试+域名信息文档              100%
+
+
+
+
+mysql -h127.0.0.1 -P3306 -usuvdata -p0buGzN5fq8VUibFtl0
+
+find . -name "*.conf" | xargs grep "9901"
+find / -type f -name "*.conf" | xargs grep "54.65.207.85"
+
+
+
+
+cd ./OpenIM-Admin-account
+npm run build
+ssh -t -t root@47.57.13.206 "mv /data/front/admin /data/front/backfile/admin_`date +%F_%H:%M:%S`"
+scp -r dist root@47.57.13.206:/data/front/admin
+
+
+
+pujing-cluster-server-1-1
+
+
+47.57.137.252
+
+fG1Vgp6UZ5lIOMjvTbU5zcelHM
+
+i-j6cbg2ptljvb1y1z5q6a
+
+
+1gwe7eh2fDsN9X1
+
+172.16.0.246
+
+https://admin.wanshmjikl.com
+
+
+
+
+http://8.212.0.111:11008  
+
+
+https://api.dhsujkainbl.com/complete_admin/admin/init/get_client_config
+https://api.dhsujkainbl.com/complete_admin/admin/init/set_client_config
+
+
+
+
+pujing-open-im-c-front-1-1
+
+8.212.10.119
+ucF3jkMTgoMR7HNyDDUqTMSWSe
+
+https://portal.fgzxkk.com
+亚洲云海05
+
+portal.fgzxkk.com
+portal
+cname
+f42a34db.u.fn01.vip.
+
+
+yunwei 123456
+
+
+wy@5090442127606325.onaliyun.com
+NQC#W^PUGnJVc!IiiW3V&ERKTN
+
+
+
+永利iom搭建
+
+j6cbg2ptljvb1y1z5q6a
+
+
+https://qsjielkdinsjkl.com/videoGame/VerifySession
+
+
+
+测试iom-Jenkins修改项目名

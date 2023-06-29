@@ -1,0 +1,9 @@
+{
+  "plugins": ["auto-scroll-table","splitter","edit-link"],
+   "pluginsConfig": {
+      "edit-link": {
+            "base": "//github.com/yulilong/book/edit/master",
+            "label": "编辑此页面"
+       }
+    }
+}

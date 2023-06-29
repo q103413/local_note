@@ -2,52 +2,6 @@
 
 ## 服务第一，技术第二
 
-## docker
-
-```
-docker ps -a
-进入容器
-docker attach id 
-docker exec -it 243c32535da7 /bin/bash
-docker rm id
-```
-
-mysql
-运行容器
-
-```shell
-docker run -it xxx /bin/bash
-docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
-```
-
-docker start <容器 ID>
-docker stop <容器 ID>
-
-yum [options] [command] [package ...]
-options：可选，选项包括-h（帮助），-y（当安装过程提示选择全部为 "yes"），-q（不显示安装的过程）等等
-
-```shell
-docker logs -f -t --since="2017-05-31" --tail=10 edu_web_1
-```
-
---since : 此参数指定了输出日志开始日期，即只输出指定日期之后的日志。
-
--f : 查看实时日志
-
--t : 查看日志产生的日期
-
--tail=10 : 查看最后的10条日志。
-
-edu_web_1 : 容器名称
-
-​	
-
-##### docker 重启所有的容器
-
-```
-docker restart $(docker ps -a -q)
-```
-
 
 
 ## 查看端口和进程
@@ -120,6 +74,10 @@ ps -ef | grep nginx
 
 ```shell
 find . -name file.txt
+```
+
+```shell
+find / -name "Open-IM*"
 ```
 
 ## SCP文件传输
@@ -320,3 +278,23 @@ vim跳转到指定的行
 如果只是临时显示vim的行号，只须按ESC键退出编辑内容模式，输入“：set number”后按回车键，就可以显示行号了。行号显示只是暂时的，退出vim后再次打开vim就不显示行号了
 
 **:set nu**
+
+
+
+
+
+清理磁盘
+
+Linux 查看磁盘空间
+
+```
+df -h
+```
+
+```
+# du -sh *
+```
+
+**du** 的英文原义为 **disk usage**，含义为显示磁盘空间的使用情况，用于查看当前目录的总大小。
+
+例如查看当前目录的大小：
