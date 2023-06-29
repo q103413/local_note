@@ -2,7 +2,7 @@
   "plugins": ["auto-scroll-table","splitter","edit-link"],
    "pluginsConfig": {
       "edit-link": {
-            "base": "//github.com/yulilong/book/edit/master",
+            "base": "https://github.com/q103413/local_note/blob/main",
             "label": "编辑此页面"
        }
     }
