@@ -96,7 +96,7 @@ find . -name "*GLIBC_2*"
 
 一、查看 nginx 安装目录
 ps -ef | grep nginx
- 
+
 二、查看配置文件 nginx.conf 路径 
 nginx -t
 这条命令也可以用于检查配置文件是否正确。
@@ -150,7 +150,7 @@ dir_name: 远程的一个user可以写入文件的目录
 
 注意: 选项-P的位置, 尽量直接放在scp命令之后, 否则可能有错误.
 
- 
+
  [root@localhost ~]# unzip [选项] 压缩包名
 
 
@@ -257,40 +257,12 @@ G - 移动到最后一行
 g - 移动到第一行
 Q 退出less 命令
 
-
 vim跳转到指定的行
 
-没有rm删不掉的，如果有,那就sudo
 
-我们可以使用 ln 命令来创建软连接，那么怎样删除呢？
-rm symbolic_link_name
-
-使用 unlink 命令删除软链接
-当然也可以使用 unlink 命令，但是不要直接使用软链接的名称，因为它不仅仅用于删除链接，还会删除文件。
-
-
-删除软链接的另一种方法是使用 unlink 命令。这个命令乍听起来好像只用于删除链接，但其实它也可以删除文件。使用方式如下：
-unlink name_or_path_of_link
-
-这么说unlink岂不是一点用都没得，就像rmdir一样
-
-
-
-  export NODE_HOME=/data/gitbook/node
-  export PATH=$NODE_HOME/bin:$PATH
 
 
   admin.156857g.com
-
-
-
-工作日报
-2023-06-16 
-1、OpenIM服务端部署文档迁移到MarkDown    已完成（100%）
-2、更新minio域名                        已完成（100%）
-3、鑫博葡京oim单机版域名信息MarkDown文档  已完成（100%）
-4、日常加域名换桶验证 已完成（100%）
-
 
 
 葡京 彩票游戏   0607
@@ -340,7 +312,7 @@ https://mobile.chsunamksj.com/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGci
 gams    app  mobile
 cname
 aeb59c84.u.fn01.vip. 
- 
+
 16.162.73.3   17701   分组  永利游戏彩票
 永利游戏彩票 非常用端口，备用地址
 https://portal.chsunamksj.com:17701/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAwMTQiLCJ1c2VySWQiOjEwMDAxNCwidXNlck5hbWUiOiJ4NTAwN1hGQ1Bjd2VBNyIsInN1cFVzZXJJZCI6MTAwMDAwLCJleHAiOjE2ODQ1MzQ0NzF9.T4zJakWbUGITLgLEgRb3uKfNVJLo1BRLqZOW6YPas1FvCZL3TTgwoTK0MhLOQu6rYUL18FEceJUL5ec8G2wd2Mf3kkkaGTTrD_09BjwAHr92RIOII-vdciF-bjIcSkw3bUtFZssSguqyFLR6vIAv4Gd020F_vBG1G05UzTjCVU0&id=101&code=SHI_SHI_CAI
@@ -398,24 +370,7 @@ https://games.fjjfghsd.cn/mobile/index/#/betRoom?userToken=Bearer%20eyJhbGciOiJS
 永利彩票游戏域名信息-- http://doc.xfgjoa.com:18181/docs/game_lottery/game_lottery-1eqbk5a9e0h0m
 
 
-工作日报
-2023-06-17
-1.整理彩票游戏域名信息MarkDown         已完成（100%）
-2、线上问题处理                        已完成（100%）
-3.熟悉业务                            已完成（100%）
-
-
-
-
 https://t.me/tybetter
-
-
-
-
-工作日报
-2023-06-19
-1、线上问题处理                        已完成（100%）
-2.色站测试域名信息整理MarkDown         未完成（50%）
 
 
 
@@ -499,23 +454,11 @@ bt 1
 # 卸载locales和语言包，重新安装，再执行locale-gen
 sudo apt-get purge locales
 sudo apt-get purge language-pack-en
- 
+
 sudo apt-get install locales
 sudo apt-get install language-pack-en
- 
+
 sudo locale-gen en_us.utf-8
-
-
-
-工作日报
-2023-06-20
-1、线上问题处理                        完成（100%）
-2.色站测试域名信息整理MarkDown         完成（100%）
-3.色站测试部署redis+TLS登陆            未完成（70%）
-4.oim测试jenkins环境node              完成（100%）
-
-2023-06-19    11:00-01:00  3小时   葡京 永利 oim 升级，服务异常排查。色站测试坏境问题分析处理，（web服务假死导致，更新后正常）
-
 
 
 
@@ -533,20 +476,6 @@ redis-cli --tls --cacert /data/redistls/rootCA.pem --cert /data/redistls/server.
 
 
 Connection: Disconnect on error: SSL Error: Openssl is missing. Please install Openssl (OpenSSL 1.1.1g  21 Apr 2020)
-
-
-
-工作日报
-2023-06-21
-1、线上问题处理            完成（100%）
-2、实现文档导航菜单       完成（100%）
-
-
-工作日报
-2023-06-22
-1、线上问题处理            完成（100%）
-2、h5域名排查               100%
-3、测试色站jenkins环境       90%
 
 
 
@@ -711,34 +640,6 @@ scp -r build root@47.57.13.206:/data/front/pc
 
 
 
-工作日报
-2023-06-23
-1、线上问题处理            完成（100%）
-2、oim-test-jenkins部署       100%
-
-
-47.57.13.206
-
-
-工作日报
-2023-06-25
-1、线上问题处理              100%
-2、色站测试域名信息文档       100%
-2、oim测试域名信息文档        90%
-
-
-
-工作日报
-2023-06-26
-1、线上问题处理                          100%
-2、测试环境调试+域名信息文档              100%
-
-
-工作日报
-2023-06-26
-1、线上问题处理                          100%
-2、测试oim-Jenkins改任务名             100%
-
 mysql -h127.0.0.1 -P3306 -usuvdata -p0buGzN5fq8VUibFtl0
 
 find . -name "*.conf" | xargs grep "9901"
@@ -816,5 +717,65 @@ https://qsjielkdinsjkl.com/videoGame/VerifySession
 测试iom-Jenkins修改项目名
 
 
-api.yeqian1.cn/137.220.225.67:443
+mlsjuanhgybf.com
+miskiajnhyg.com
 
+
+将DNS服务器修改为：ns1.dns.com  ns2.dns.com  
+
+
+location /chatjs/ {
+    alias  /data/front/chatjs/;
+}
+
+
+api.usjamnhgbn.com
+api.ksnhajhgs.com
+
+cname
+
+8c303f3a.u.fn01.vip.
+
+
+
+2023-07-07  晚班检测报告1：
+
+1、鑫博、葡京直播检测
+  鑫博4个直播账号检测，每个账号 推流和拉流域名正常，站内信暂无异常提醒
+  葡京3个直播账号检测，每个账号检测 腾讯云国内jiaozi811@126.com账号 播放域名   portal.senessbz.com 昨晚被封，已加新域名。其他账号正常。
+  没有欠费。
+
+2、OPEN-IM检测
+  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
+  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
+
+3、鑫博、葡京站点访问检测：
+  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
+  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
+
+
+
+
+
+2023-07-07  晚班检测报告2：
+
+1、鑫博、葡京直播检测
+  鑫博4个直播账号检测，域名正常，无异常提醒
+  葡京3个直播账号检测，域名正常，无异常提醒
+  没有欠费。
+
+2、OPEN-IM检测
+  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
+  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
+
+3、鑫博、葡京站点访问检测：
+  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
+  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
+
+
+http://124.71.182.151:8000/admin/#/admin/domain/domainsiteinfo/
+
+
+good.brrencdnaomsecan.com
+
+47.243.241.27

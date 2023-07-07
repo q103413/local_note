@@ -298,3 +298,87 @@ df -h
 **du** 的英文原义为 **disk usage**，含义为显示磁盘空间的使用情况，用于查看当前目录的总大小。
 
 例如查看当前目录的大小：
+
+
+
+## 软连接
+
+查看
+
+```shell
+ls -al
+```
+
+
+
+#### 创建
+
+ln 命令的基本格式如下：
+
+[root@localhost ~]# ln [选项] 【源文件】 【目标文件】
+
+源文件是指软连接指向的目录，就比如C盘下的某个文件的路径。
+
+目标文件是指“快捷键”文件名称 该文件是指令创建的。
+
+以上两个文件都必须使用绝对地址 
+
+例如：
+
+当前路劲创建 test 引向 /var/www/test 文件夹
+
+```
+ln -s /var/www/test test
+```
+
+创建 /var/test 引向 /var/www/test 文件夹
+
+```
+ln -s /var/www/test /var/test
+```
+
+#### 删除
+
+没有rm删不掉的，如果有,那就sudo
+
+我们可以使用 ln 命令来创建软连接，那么怎样删除呢？
+
+```
+rm symbolic_link_name
+```
+
+使用 unlink 命令删除软链接
+当然也可以使用 unlink 命令，但是不要直接使用软链接的名称，因为它不仅仅用于删除链接，还会删除文件。
+
+删除软链接的另一种方法是使用 unlink 命令。这个命令乍听起来好像只用于删除链接，但其实它也可以删除文件。使用方式如下：
+
+```
+unlink name_or_path_of_link
+```
+
+这么说unlink岂不是一点用都没得，就像rmdir一样
+
+  export NODE_HOME=/data/gitbook/node
+  export PATH=$NODE_HOME/bin:$PATH
+
+#### 修改
+
+修改软连接
+
+ln -snf [新的原文件或目录] [目标文件或目录]
+
+这将会修改原有的链接地址为新的地址
+
+例如:
+
+创建一个软链接
+
+```
+ln -s /var/www/test /var/test
+```
+
+修改软链接
+
+```
+ln -snf /var/www/test1 /var/test
+```
