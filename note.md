@@ -779,3 +779,85 @@ http://124.71.182.151:8000/admin/#/admin/domain/domainsiteinfo/
 good.brrencdnaomsecan.com
 
 47.243.241.27
+
+
+
+
+
+2023-07-09  晚班检测报告2：
+
+1、鑫博、葡京直播检测
+  鑫博4个直播账号检测，域名正常，无异常提醒
+  葡京3个直播账号检测，域名正常，无异常提醒
+  没有欠费。
+
+2、OPEN-IM检测
+  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
+  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
+
+3、鑫博、葡京站点访问检测：
+  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
+  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
+
+
+另一些事情
+一切都搭建好以后，你会发现你给gmail，qq，163发邮件都能收到，唯独outlook被退信，这是因为你的IP不在outlook邮件服务的白名单中，你需要向他们提供你的IP及相关信息，我这里没有提供，故不作演示
+
+
+
+
+账号 yzm@bbtx888.xyz
+密码 85lw@7H5nv
+
+SMTP  
+mail.bbtx888.xyz 
+
+
+端口&加密端口
+25,587
+
+
+yzm@bbtx888.xyz
+
+ywzhiban@gmail.com
+
+
+admin.bskiejnsmlaj.com
+
+smtp://yzm@bbtx888.xyz:85lw@7H5nv@mail.bbtx888.xyz:25/备注22222
+
+13.213.234.171
+
+
+ehlo mail.bbtx888.xyz 
+mail from: yzm@bbtx888.xyz
+rcpt to: ywzhiban@gmail.com
+Data
+subject: testsmtp
+testsmtptestsmtptestsmtp
+.
+
+
+find ./ -name "*.conf" | xargs grep "13008"
+
+
+
+512387616
+
+
+
+
+2023-07-10  晚班检测报告：
+
+1、鑫博、葡京直播检测
+  鑫博4个直播账号检测，域名正常，无异常提醒
+  葡京3个直播账号检测，域名正常，无异常提醒
+  没有欠费。
+
+2、OPEN-IM检测
+  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
+  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
+
+3、鑫博、葡京站点访问检测：
+  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
+  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
