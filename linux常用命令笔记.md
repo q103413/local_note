@@ -230,6 +230,15 @@ sed -n '5,10p' filename
 
 tail -f /n xxx.file 
 
+linux查看文件最后几行数据
+
+```shell
+# tail -n 行数值 filename
+tail -n 20 filename
+```
+
+
+
 ### less
 
 less [参数] 文件 

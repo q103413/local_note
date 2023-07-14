@@ -673,7 +673,6 @@ https://admin.wanshmjikl.com
 
 
 
-
 http://8.212.0.111:11008  
 
 
@@ -736,43 +735,6 @@ cname
 
 8c303f3a.u.fn01.vip.
 
-
-
-2023-07-07  晚班检测报告1：
-
-1、鑫博、葡京直播检测
-  鑫博4个直播账号检测，每个账号 推流和拉流域名正常，站内信暂无异常提醒
-  葡京3个直播账号检测，每个账号检测 腾讯云国内jiaozi811@126.com账号 播放域名   portal.senessbz.com 昨晚被封，已加新域名。其他账号正常。
-  没有欠费。
-
-2、OPEN-IM检测
-  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
-  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
-
-3、鑫博、葡京站点访问检测：
-  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
-  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
-
-
-
-
-
-2023-07-07  晚班检测报告2：
-
-1、鑫博、葡京直播检测
-  鑫博4个直播账号检测，域名正常，无异常提醒
-  葡京3个直播账号检测，域名正常，无异常提醒
-  没有欠费。
-
-2、OPEN-IM检测
-  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
-  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
-
-3、鑫博、葡京站点访问检测：
-  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
-  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
-
-
 http://124.71.182.151:8000/admin/#/admin/domain/domainsiteinfo/
 
 
@@ -781,23 +743,6 @@ good.brrencdnaomsecan.com
 47.243.241.27
 
 
-
-
-
-2023-07-09  晚班检测报告2：
-
-1、鑫博、葡京直播检测
-  鑫博4个直播账号检测，域名正常，无异常提醒
-  葡京3个直播账号检测，域名正常，无异常提醒
-  没有欠费。
-
-2、OPEN-IM检测
-  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
-  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
-
-3、鑫博、葡京站点访问检测：
-  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
-  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
 
 
 另一些事情
@@ -847,17 +792,153 @@ find ./ -name "*.conf" | xargs grep "13008"
 
 
 
-2023-07-10  晚班检测报告：
 
-1、鑫博、葡京直播检测
-  鑫博4个直播账号检测，域名正常，无异常提醒
-  葡京3个直播账号检测，域名正常，无异常提醒
-  没有欠费。
+m.ejsikdlm.com
+cname
+m_ejsikdlm_com.erhuangwenmen.net
 
-2、OPEN-IM检测
-  OPEN-IM鑫博 使用pc登陆 发消息和图片验证，正常使用。
-  OPEN-IM葡京 使用pc登陆 发消息和图片验证，正常使用。
 
-3、鑫博、葡京站点访问检测：
-  鑫博站点使用H5域名登陆检测，登陆正常，api域名正常。
-  葡京站点使用H5域名登陆检测，登陆正常，api域名正常。
+api.ckaijsnm.com
+cname
+api_ckaijsnm_com.erhuangwenmen.net
+
+
+api.klsookemh.com
+cname
+api_klsookemh_com.erhuangwenmen.net
+
+
+free.meiyuwopay.com
+cname
+free_meiyuwopay_com.erhuangwenmen.net
+
+
+api.fufu12.cn
+cname 
+yongli-pc-api.erhuangwenmen.net
+
+
+fhydusnmajh.com
+cname
+fhydusnmajh_com.erhuangwenmen.net
+
+
+qianxun.jiongxia.cn
+cname
+qianxun_jiongxia_cn.erhuangwenmen.net
+
+
+m.xsjjhhkk.com
+cname
+m_xsjjhhkk_com.erhuangwenmen.net
+
+
+
+p m.aakkhhcn.cn 1.1.1.1
+ ipconfig /flushdns
+
+
+
+
+
+永利pc新增域名 
+
+admin.twieriox.cn
+8.217.97.57:11008
+亚洲云海5
+
+pc.twieriox.cn
+8.217.97.57:9999
+亚洲云海5
+
+api.twieriox.cn 
+47.243.187.91:8888
+亚洲云海5  有跨域问题
+
+
+自己改自己保存提示名称重复。。 就只有一个
+
+
+
+永利pc新增自建cdn域名-测试通过
+
+api.fufu12.cn
+api.weert5.cn
+自建
+
+pc.weert5.cn
+自建
+
+admin.weert5.cn
+自建
+
+
+
+葡京pc新增自建cdn域名-测试通过
+
+api.wtfr.cn  
+api.aasxxn.cn
+自建
+
+admin.aasxxn.cn
+admin.wtfr.cn  
+自建
+
+pc.aasxxn.cn
+pc.wtfr.cn  
+自建
+
+
+永利pc新增-腾云运算cdn测试
+api.sswwwn66.com  有跨域问题
+8.217.121.244:13308
+腾云运算
+
+pc.sswwwn66.com 可用
+8.212.14.129:15008
+腾云运算
+
+admin.sswwwn66.com
+8.212.14.129:11008
+永利pc新增-腾云运算
+
+
+ping不出IP时，可以使用nslookup命令进行更详细的DNS查询。
+命令为：nslookup 域名
+
+
+
+open.saasxmjuhngy.com
+
+
+auth.saasxmjuhngy.com
+
+auth.saasxmjuhngy.com
+auth
+A
+52.223.26.251
+
+open.saasxmjuhngy.com
+open
+A
+75.2.74.221
+
+saasxmjuhngy.com
+修改ns服务器
+
+NS
+ns1.dns.com 
+
+NS
+ns2.dns.com
+
+
+
+auth.saasxmjuhngy.com
+52.223.26.251
+
+open.saasxmjuhngy.com
+75.2.74.221
+
+
+https://psjlainmshg.com
