@@ -1,0 +1,59 @@
+
+
+落地页规范
+
+
+目标
+	1、
+		CDN源站一个端口对应一个项目，改变域名不改服务器配置
+	2、
+		nginx项目目录和配置文件的统一命名格式：项目名称_落地页名称，比如miss_daohang
+	3、
+		部署、更新项目做到流程配置统一规范
+
+
+要求
+	项目目录/data/front
+	nginx配置目录 /usr/local/nginx1.23/conf/vhosts/
+	配置完成后，先申请测试域名，测试通过之后再迁移正式域名。
+	改变域名不会改服务器配置，301跳转除外
+	server_name 全配置成 localhost
+
+
+操作步骤
+	1 进入项目目录/data/front，SCP传输项目资源
+	2 进入nginx配置目录 /usr/local/nginx1.23/conf/vhosts/，添加配置文件，具体配置见下文
+	3 CDN添加测试域名，同时要求客服协助解析ns
+	4 申请和添加https
+	5 请求CDN客服协助开通域名对应端口
+	6 更改源站和端口
+	7 测试通过
+	8 按照从3开始的步骤配置正式域名。
+
+
+注意细节：
+	上线之前让CDN先开放域名对应的源站端口，再修改配置。
+	server_name localhost
+
+
+静态资源配置：
+
+server {
+    listen       26178;
+    server_name  localhost;	
+    location / {
+        root   /data/front/project_name;
+        index  index.html index.htm;
+    }
+   
+}
+
+重定向配置：
+
+server {
+    listen       26191;
+    server_name  localhost;
+   
+	return 301  https://migration.kjishaunembng.com$request_uri; 
+
+}

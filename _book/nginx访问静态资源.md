@@ -72,7 +72,7 @@ nginx是一款高性能的服务器，用途很多。除了可以作为后端服
 ```
 
 
-
+ 
 
  [![img](./nginx访问静态资源.assets/1238609-20200430162047114-1726912757.png)](https://img2020.cnblogs.com/blog/1238609/202004/1238609-20200430162047114-1726912757.png)[![img](./nginx访问静态资源.assets/1238609-20200430162104429-1111596185.png)](https://img2020.cnblogs.com/blog/1238609/202004/1238609-20200430162104429-1111596185.png)[![img](./nginx访问静态资源.assets/1238609-20200430162117497-897049993.png)](https://img2020.cnblogs.com/blog/1238609/202004/1238609-20200430162117497-897049993.png)
 
@@ -92,6 +92,7 @@ nginx是一款高性能的服务器，用途很多。除了可以作为后端服
 　　　　例子：
 
 　　　　　　location /123/abc/ {
+
 　　　　　　　　root /ABC;
 　　　　　　}
 　　　　　　当请求http://qingshan.com/123/abc/logo.png时，会返回 /ABC/123/abc/logo.png文件，即用/ABC 加上 /123/abc。
@@ -99,12 +100,14 @@ nginx是一款高性能的服务器，用途很多。除了可以作为后端服
 
 　　root（根目录）是最上层目录的定义。
 
-```shell
-# 例子：
-  location /123/abc/ {
-    alias /ABC;
-  }
-  # 当请求http://qingshan.com/123/abc/logo.png时，会返回 /ABC/logo.png文件，即用/ABC替换 /123/abc。
+```
+例子：
+
+　　　　　　location /123/abc/ {
+
+　　　　　　　　alias /ABC;
+　　　　　　}
+　　　　　　当请求http://qingshan.com/123/abc/logo.png时，会返回 /ABC/logo.png文件，即用/ABC替换 /123/abc。
 ```
 
 　　　

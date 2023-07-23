@@ -27,6 +27,10 @@ Xnn^VUz3
 PV%3e7TK
 ywzhiban@gmail.com
 
+0995980892
+asd&qwe123
+这个值班号不要加好友任何人 不让外人知道号码
+
 18.163.0.139 
 root
 Cx1B6$J&lHpViqwr6x
@@ -942,3 +946,67 @@ open.saasxmjuhngy.com
 
 
 https://psjlainmshg.com
+
+find . -name "*.conf" | xargs grep "15891"
+
+
+
+
+未定
+admin.kvrbrb88.cn
+47.57.13.206:15891 
+
+
+hhy785.cn
+
+
+大象传媒
+入心间
+情难忘
+
+
+
+https://api.zklimawed.com
+
+ absolute_redirect off;
+
+
+
+最近遇到域名自动跳转端口的问题：
+
+鑫博葡京API端口跳转原因：
+1. 域名后缀没有匹配到，（）
+
+
+彩票游戏对接后台-后台域名端口跳转原因
+2. 禁止跳转端口
+
+关闭绝对重定向，解决重定向默认带上端口的问题，默认为开启
+
+
+重定向是否带上端口的开关。关闭后
+port_in_redirect off; 
+
+
+
+最近频繁遇到域名打开自动跳转端口的问题的分析以及解决方案：
+
+
+问题情况：
+当我们访问http://xxxx/home 时，如果匹配不到location，会自动加上端口port以及最末尾的'/'重定向到http://xxxx:port/home/
+
+
+原因：
+访问带目录的 url 时，如果末尾不加斜杠("/")，nginx 默认会加上斜杠，发生一次 301 跳转，
+
+
+解决方案：
+  1，匹配location
+
+  2，添加相关配置项（以下二选一即可解决）
+    1、absolute_redirect off;
+    绝对重定向开关，默认为开启；关闭后，重定向url 没有域名（IP）和端口号, 而是直接采用相对路径进行重定向
+
+    2、port_in_redirect off;
+    重定向是否带上端口的开关；关闭后， 则响应头Location的URL即是重定向url没有端口号
+    经验证，问题也能解决：

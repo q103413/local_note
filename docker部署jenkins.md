@@ -51,6 +51,7 @@ systemctl start docker
 
 ```shell
 docker pull jenkins
+#新版 jenkins/jenkins
 ```
 
 #### 启动jenkins

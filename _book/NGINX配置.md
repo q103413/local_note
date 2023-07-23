@@ -34,7 +34,7 @@ sudo nginx
         index index.html;
         #新增配置
         add_header Content-Type text/plain;        
-        return 200 "I'm test";
+        # return 200 "I'm test";
     }
 ```
 

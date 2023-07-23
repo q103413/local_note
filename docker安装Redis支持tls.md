@@ -20,17 +20,35 @@ docker pull redis:latest
 
 使用以下命令来查看是否已安装了 redis：
 
+```shell
+docker images | grep redis
 ```
-$ docker images
+
+### 2、创建挂载目录
+
+```
+mkdir /usr/local/docker/redis
 ```
 
 #### 三、修改配置文件
 
 1. 创建配置文件目录存放redis.conf，文件从[官网下载](http://download.redis.io/redis-stable/redis.conf)
-2. 创建文件夹,新建配置文件贴入从官网下载的配置文件并修改
+
+   ```
+   wget http://download.redis.io/redis-stable/redis.conf
+   ```
+
+2. ### 权限
+
+   ```
+   chmod 777 redis.conf
+   ```
+
+   
+
+3. 新建配置文件贴入从官网下载的配置文件并修改
 
 ```bash
-mkdir /usr/local/docker/redis
 vi /usr/local/docker/redis/redis.conf
 ```
 
@@ -63,16 +81,15 @@ docker run -itd --name redis-test -p 6379:6379 redis
 
 ### 2、配置文件启动
 
-
-
-```bash
+```shell
 docker run -p 6379:6379 --name myredis -v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf -v /usr/local/docker/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
 参数解释说明：
 
-- -p 6379:6379 端口映射：前表示主机部分，：后表示容器部分。
+- -p 6379:6379 端口映射：前面是宿主机：后表示容器部分。
 - --name myredis  指定该容器名称，查看和进行操作都比较方便。
+- -v 挂载文件或目录：前面是宿主机，后面是容器。
 - -v 挂载目录，规则与端口映射相同。
    为什么需要挂载目录：个人认为docker是个沙箱隔离级别的容器，这个是它的特点及安全机制，不能随便访问外部（主机）资源目录，所以需要这个挂载目录机制。
    例： -v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf  容器 /etc/redis/redis.conf 配置文件 映射宿主机 /usr/local/docker/redis/redis.conf。  会将宿主机的配置文件复制到docker中
@@ -80,7 +97,16 @@ docker run -p 6379:6379 --name myredis -v /usr/local/docker/redis/redis.conf:/et
 - -d redis 表示后台启动redis
 - redis-server /etc/redis/redis.conf  以配置文件启动redis，加载容器内的conf文件，最终找到的是挂载的目录/usr/local/docker/redis/redis.conf
    **重要:  docker 镜像reids 默认 无配置文件启动**
+- -d redis redis-server /etc/redis/redis.conf：表示后台启动redis，以配置文件启动redis，加载容器内的conf文件。
 - --appendonly yes  开启redis 持久化
+
+
+
+### 7、检查redis运行状态
+
+```bash
+docker ps
+```
 
 # 五、查看是否运行成功
 
@@ -142,18 +168,11 @@ $ docker run -itd --name redis-test -p 26379:6379 redis
 
 测试
 
-申请证书
-
-1. 生成自签名证书和私钥 您需要生成一个自签名证书和私钥，以便在Redis和客户端之间建立加密连接。您可以使用openssl命令生成这些文件。以下是生成证书和私钥的示例命令：
-
-```shell
-openssl req -newkey rsa:2048 -nodes -keyout redis.key -x509 -days 365 -out redis.crt
-```
-
-1. 将证书和私钥文件复制到Docker容器中 您需要将上一步生成的证书和私钥文件复制到Redis Docker容器中。可以使用docker cp命令将这些文件从本地文件系统复制到容器内。
-
 ```
 $ docker cp redis.crt redis:/usr/local/etc/redis/
 $ docker cp redis.key redis:/usr/local/etc/redis/
 ```
 
+### 8、检查连接状况
+
+![img](./docker安装Redis支持tls.assets/1200.png)
