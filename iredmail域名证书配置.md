@@ -1,4 +1,4 @@
-# [iRedMail](https://www.iredmail.org/)常见异常处理
+# [iRedMail](https://www.iredmail.org/)域名证书配置
 
 ## 一、准备工作
 
