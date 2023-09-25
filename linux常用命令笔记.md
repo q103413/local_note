@@ -57,6 +57,7 @@ curl模拟的访问请求一般直接在控制台显示，而wget则把结果保
 ```shell
 find / -type f -name "*.log" | xargs grep "ERROR"
 find . -name "*.log" | xargs grep "error"
+grep 8080 *.conf
 ```
 
 一、查看 nginx 安装目录
@@ -79,6 +80,8 @@ find . -name file.txt
 ```shell
 find / -name "Open-IM*"
 ```
+
+
 
 ## SCP文件传输
 
@@ -120,6 +123,48 @@ scp -P 2233 get_info.sh liemer@192.168.76.52:/usr/local/src
 
 注意: 选项-P的位置, 尽量直接放在scp命令之后, 否则可能有错误.
 
+### 一、lrzsz简介
+
+**rz，sz是Linux/Unix同Windows进行ZModem文件传输的命令行工具。**
+
+**rz 可以很方便的从客户端传文件到服务器，sz也可以很方便的从服务器传文件到客户端，就算中间隔着跳板机也不影响。**
+
+**rz(receive Zmodem)
+**
+
+sz(send Zmodem)
+
+远程文件传输的工具有很多，例如rz、sz、scp、sftp、ftp等。
+
+如果环境服务器需要通过跳板机（relay）访问，使用rz、sz传输更为方便。
+
+### 二、安装lrzsz
+
+#### yum 方式安装
+
+```shell
+# yum -y install lrzsz
+
+# yum info lrzsz
+
+# rpm -ql lrzsz
+
+```
+
+### 三、lrzs的使用
+
+\# rz
+
+\# sz setRps.log
+
+
+
+rzsz 有种信手拈来的快感，可惜很多终端不支持或不认真支持。 
+
+支持rzsz的终端有 xshell 、secureCRT，而 putty 和 MobaXterm 均不支持。
+
+
+
 ## 解压
 
 ```shell
@@ -132,6 +177,56 @@ unzip -d /tmp/ ana.zip
 # 解压tar包
 tar   xvf   filename
 ```
+
+# linux tar压缩解压缩文件夹、文件命令详解
+
+## 直接先上三个常用命令
+
+- 1.压缩当前目录下文件夹/文件test到test.tar.gz:
+
+```css
+tar -zcvf test.tar.gz test
+```
+
+- 2.解压缩当前目录下的file.tar.gz到file:
+
+```css
+tar -zxvf file.tar.gz
+```
+
+## 参数详解
+
+### 五个命令中必选一个
+
+- -c: 建立压缩档案
+- -x：解压
+- -t：查看内容
+- -r：向压缩归档文件末尾追加文件
+- -u：更新原压缩包中的文件
+
+### 这几个参数是可选的
+
+- -z：有gzip属性的
+- -j：有bz2属性的
+- -Z：有compress属性的
+- -v：显示所有过程
+- -O：将文件解开到标准输出
+
+### -f必选参数
+
+-f: 使用档案名字，这个参数是最后一个参数，后面只能接档案名。
+
+## 查看
+
+在不解压的情况下查看压缩包的内容：
+
+```css
+tar -tf test.tar.gz
+```
+
+
+
+
 
 ## 文件操作
 
@@ -310,6 +405,12 @@ df -h
 
 例如查看当前目录的大小：
 
+### 清理日志
+
+```shell
+ cat /dev/null > backend.log 
+```
+
 
 
 ## 软连接
@@ -393,3 +494,13 @@ ln -s /var/www/test /var/test
 ```
 ln -snf /var/www/test1 /var/test
 ```
+
+# 下载
+
+sz 命令
+
+没有就yum -y install lrzsz
+
+
+
+1、**利用ls命令查看，该命令可将结果以KB、MB等为单位进行显示，语法为“ls -ll”或“ls-lh”**；

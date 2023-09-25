@@ -93,6 +93,7 @@ curl -d
 
 
 
+
 find / -type f -name "*.log" | xargs grep "ERROR"
 find . -name "*.log" | xargs grep "error"
 
@@ -488,7 +489,10 @@ export PATH=$PATH:/usr/local/jdk-11.0.1/bin:/data/node-v14.21.3-linux-x64/bin:/u
 
 
 
-find ./ -name "*.conf" | xargs grep "10881"
+find ./ -name "*.yaml" | xargs grep "minio"
+
+
+find ./ -name "*.conf" | xargs grep "PH_POSTFIX_MAIL_REINJECT_PORT"
 
 
 jenkins密码
@@ -787,7 +791,7 @@ testsmtptestsmtptestsmtp
 .
 
 
-find ./ -name "*.conf" | xargs grep "13008"
+find ./ -name "*.conf" | xargs grep "16002"
 
 
 
@@ -947,7 +951,7 @@ open.saasxmjuhngy.com
 
 https://psjlainmshg.com
 
-find . -name "*.conf" | xargs grep "15891"
+find . -name "*.conf" | xargs grep "zxsahunm"
 
 
 
@@ -1010,3 +1014,180 @@ port_in_redirect off;
     2、port_in_redirect off;
     重定向是否带上端口的开关；关闭后， 则响应头Location的URL即是重定向url没有端口号
     经验证，问题也能解决：
+
+
+
+pc.weert5.cn
+cname
+yli-oim-web.erhuangwenmen.net
+
+
+mayun2@hicloud102.onmicrosoft.com
+新密码 mcPgC8&8Tv9%YYqh^uZxgnM%AM
+
+
+mcPgC8&8Tv9%YYqh^uZxgnM%AM
+
+
+find . -name "*.conf" | xargs grep "phpmeiyufc"
+
+
+
+1第一台可一键重启
+2,3单独启动服务
+
+1,2 web重启
+
+
+1000000
+
+
+APPID 
+1319472389
+
+SecretId
+IKID22va5MUSGtSHvNju298zf9RZVItWBfvz
+
+SecretKey
+dBa0Tp4CB0lVDtY5mLqGqMm4IOL6iDZk
+
+
+https://api.fhjksnamunsh.com/api/super_group/get_groups_info
+
+
+wczkrczedfw.com
+zdazkcvxdvm.com
+
+
+pc.wtfr.cn
+
+pc.wee558.cn
+cname
+puj-oim-web.erhuangwenmen.net
+
+
+pic.wczkrczedfw.com
+cname
+wopay-img.erhuangwenmen.net
+
+
+19566285306
+
+
+
+wang.hxinwopay.com
+
+
+find . -name "*.conf" | xargs grep "wang"
+
+
+wang.hshiwopay.com
+
+
+
+
+多線路api檢測 CheckMulti-Api.go
+機器:jumpserver
+程式位址:/opt/script
+執行方法:go run CheckApi.go
+
+
+
+可以選正則匹配
+(http|https):\/\/api.u83pu.cn(.*)
+其域名下的路徑緩存都能清除
+
+
+
+cd /data/Open-IM-Server/script/ && ./start_all.sh
+
+
+cd /data/Open-IM-Server/script/ && sh ./check_all.sh
+
+
+cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
+
+
+cd /data/Open-IM-Server/script/ && ./start_all.sh && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ &&  ./start_rpc_service.sh && ./check_all.sh 
+
+
+p.kwecznedite.com
+
+
+
+net.webmiss.cn
+
+
+app.kwecznedite.com
+
+
+a.kwecznedite.com
+
+
+(PHP_VERSION >= 6 || !get_magic_quotes_gpc())
+
+
+值班手机登陆密码： qfZ3yr75      项目线路更新，直接使用值班手机获取验证码。
+
+
+
+要运行java的项目需要先将项目打包成war包或者jar包，
+
+打包成war包需要将war包部署到tomcat服务器上才能运行。
+
+而打包成jar包可以直接使用java命令执行。
+
+在linux系统中运行jar包主要有以下几种方式：
+
+一、java -jar XXX.jar
+
+这是最基本的jar包执行方式，但是当我们用ctrl+c中断或者关闭窗口时，程序也会中断执行。
+
+二、java -jar XXX.jar &
+
+&代表在后台运行，使用ctrl+c不会中断程序的运行，但是关闭窗口会中断程序的运行。
+
+三、nohup java -jar XXX.jar &
+
+使用这种方式运行的程序日志会输出到当前目录下的nohup.out文件，使用ctrl+c中断或者关闭窗口都不会中断程序的执行。
+
+三、nohup java -jar XXX.jar >temp.out &
+
+>temp.out的意思是将日志输出重定向到temp.out文件，使用ctrl+c中断或者关闭窗口都不会中断程序的执行。 这个是我们想要的一种启动方式。
+>
+>
+>
+>
+>
+>docker run -d -p 21991:21991  centos-bt2  /bin/sh
+>
+>
+>
+docker run -i -t -d --name bt -p 2000:20 -p 2100:21 -p 8000:80 -p 4430:443 -p 8880:888 -p 8888:8888 --privileged=true
+ -v C:\work\www\baota:/www/wwwroot ubuntu
+
+
+ docker run -i -t -d --name newbt -p 2000:20 -p 2100:21 -p 8000:80 -p 4430:443 -p 8880:888 -p 8888:8888 -p 14435:14435 --privileged=true -v C:\work\www\baota:/www/wwwroot bt1
+
+
+
+
+==================================================================
+Congratulations! Installed successfully!
+========================面板账户登录信息==========================
+
+ 外网面板地址: http://SERVER_IP:14435/6d9d6ce3
+ 内网面板地址: http://:14435/6d9d6ce3
+ username: zmydyw91
+ password: 63646624
+
+=========================打开面板前请看===========================
+
+ 【云服务器】请在安全组放行 14435 端口
+ 因默认启用自签证书https加密访问，浏览器将提示不安全
+ 点击【高级】-【继续访问】或【接受风险并继续】访问
+ 教程：https://www.bt.cn/bbs/thread-117246-1-1.html
+
+
+  内网面板地址:   .
+  http://localhost:14435/6d9d6ce3
