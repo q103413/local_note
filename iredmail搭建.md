@@ -255,41 +255,7 @@ v=DKIM1; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhfQibjrjm5dsvQiUibUfqQl+m
 
 
 
-### 推荐阅读
 
-- # Zmail--让邮件变得简单(python)
-
-- 发送邮件是个很简单的需求，但是在实际的使用中依然碰到了很多坑，因此创建了zmail这个项目，让你使用python发送邮件的过程尽可能简单。 GitHub地址：https://github.com/ZYunH/zmail ，觉…
-
-- ZYunH
-
-- # Foxmail：为常用邮件创建模板
-
-- 工作中，我每周一都要给几个同事发会议记录。过去我要一遍一遍的输入这些同事的邮箱，并且检查有没有遗漏的。还有和我们同事重名的客户，并且还是我们的竞争对手，一不小心这邮件机密就发到…
-
-- 沛文沛语发表于outlo...
-
-- ![怎样结合Foxmail和Mailchimp制作Newsletter (EDM) 模板？](./iredmail搭建.assets/v2-4b13a1718c1ce62baebb7d717f47d1cb_250x0.jpg)
-
-- # 怎样结合Foxmail和Mailchimp制作Newsletter (EDM) 模板？
-
-- 英专生Ow...发表于外贸er
-
-- # 教你在公司内网搭建可正常收发邮件的邮件服务器-Winmail+Foxmail
-
-- 今天直奔主题吧！！！ （下一篇文章叫：在服务器上搭建思科网页安全防火墙WSA并进行访问控制和反病毒测试）我说一下今天大概的步骤： 1.准备好材料 2.安装winmail客户端 3.初始化winmail客…
-
-- 网络安全讲师琪麟
-
-
-
-
-
-![img](./iredmail搭建.assets/liukanshan-peek.a71ecf3e.png)登录即可查看 超5亿 专业优质内容
-
-超 5 千万创作者的优质提问、专业回答、深度文章和精彩视频尽在知乎。
-
-立即登录/注册
 
 
 
@@ -433,11 +399,11 @@ service iredapd restart
 
 ## 配置域名 DNS 及解析
 
-***以下内容，推荐观看 [演示视频](https://v2rayssr.com/go?url=https://youtu.be/pwgU4FRck98)，然后根据需要，替换以下命令行中的相关命令。***
+***以下内容，推荐观看 演示视频，然后根据需要，替换以下命令行中的相关命令。***
 
 ### 设置 PTR 反向解析
 
-其他 VPS 商家，请自行查阅，[搬瓦工VPS](https://v2rayssr.com/bwg.html) 打开后台管理，在左边选项 `Mail contrlos` 里面，找到右边的 `PTR Records (Reverse DNS)`，点击 `set new record` 设置即可。
+其他 VPS 商家，请自行查阅， 打开后台管理，在左边选项 `Mail contrlos` 里面，找到右边的 `PTR Records (Reverse DNS)`，点击 `set new record` 设置即可。
 
 ![img](./iredmail搭建.assets/截屏2021-10-28-12.31.48.png)
 
