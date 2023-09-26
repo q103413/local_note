@@ -58,6 +58,8 @@ v=DKIM1; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhfQibjrjm5dsvQiUibUfqQl+m
 
 设置完成，等待域名解析生效。
 
+
+
 ## 三、安全设置
 
 1. 设置DKIM记录(防垃圾邮件)
@@ -135,3 +137,13 @@ service iredapd restart
 iRedAdmin管理地址: https://你的域名/iredadmin ——邮件服务器后台管理
 
 <img src="./../../../Users/Admins/Desktop/截屏2021-10-28-13.11.02.png" alt="img" style="zoom:80%;" />
+
+
+
+七、邮箱端口列表
+
+![image-20230926164407808](./assets/image-20230926164407808.png)
+
+![image-20230926163910609](./assets/image-20230926163910609.png)
+
+![image-20230926163629171](./assets/image-20230926163629171.png)
