@@ -1108,7 +1108,8 @@ cd /data/Open-IM-Server/script/ && sh ./check_all.sh
 cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
 
 
-cd /data/Open-IM-Server/script/ && ./start_all.sh && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ &&  ./start_rpc_service.sh && ./check_all.sh 
+cd /data/Open-IM-Server/script/ && ./start_all.sh && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ &&  ./start_rpc_service.sh && ./check_all.sh && cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
+
 
 
 p.kwecznedite.com
@@ -1160,15 +1161,12 @@ a.kwecznedite.com
 >
 >
 >docker run -d -p 21991:21991  centos-bt2  /bin/sh
->
->
->
+
 docker run -i -t -d --name bt -p 2000:20 -p 2100:21 -p 8000:80 -p 4430:443 -p 8880:888 -p 8888:8888 --privileged=true
  -v C:\work\www\baota:/www/wwwroot ubuntu
 
 
  docker run -i -t -d --name newbt -p 2000:20 -p 2100:21 -p 8000:80 -p 4430:443 -p 8880:888 -p 8888:8888 -p 14435:14435 --privileged=true -v C:\work\www\baota:/www/wwwroot bt1
-
 
 
 
@@ -1189,5 +1187,10 @@ Congratulations! Installed successfully!
  教程：https://www.bt.cn/bbs/thread-117246-1-1.html
 
 
-  内网面板地址:   .
-  http://localhost:14435/6d9d6ce3
+
+
+内网面板地址:   .
+http://localhost:14435/6d9d6ce3
+
+https://xx.dj8.life/aytao.js
+
