@@ -1194,3 +1194,15 @@ http://localhost:14435/6d9d6ce3
 
 https://xx.dj8.life/aytao.js
 
+
+
+https://api.cwetzvxdwe.com/api
+
+
+docker cp ccbe4e42f5b8:/etc/nginx/nginx.conf C:\work\www\nginx
+
+docker cp ccbe4e42f5b8:/etc/nginx/conf.d/default.conf C:\work\www\nginx/conf/
+
+
+docker run --name nginx-config -p 80:80 -v C:\work\www\nginx/nginx.conf:/etc/nginx/nginx.conf  -v C:\work\www\nginx/logs:/var/log/nginx  -v C:\work\www\nginx/html:/usr/share/nginx/html  -v C:\work\www\nginx/conf:/etc/nginx/conf.d  --privileged=true -d nginx
+
