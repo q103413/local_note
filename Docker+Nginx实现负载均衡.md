@@ -6,6 +6,12 @@
 
 ### 简易负载均衡架构图
 
+![基礎觀念系列] Web Server & Nginx — (2) | by 莫力全Kyle Mo | Starbugs Weekly 星巴哥技術專欄|  Medium](https://miro.medium.com/v2/resize:fit:1024/1*TrNJZqECEj0eVuJDeNKtNQ.png)
+
+![基礎觀念系列] Web Server & Nginx — (2) | by 莫力全Kyle Mo | Starbugs Weekly 星巴哥技術專欄|  Medium](https://miro.medium.com/v2/resize:fit:1024/1*TrNJZqECEj0eVuJDeNKtNQ.png)
+
+![Load Balancing with NGINX Plus](./Docker+Nginx实现负载均衡.assets/NGINX-Plus-product-page_Load-Balancer@2x.png)
+
 ![Prevent nginx from caching DNS for proxy](./Docker+Nginx实现负载均衡.assets/nginx_proxy.png)
 
 ![How To Setup Nginx For Load Balancing? – Perpetual Enigma](./Docker+Nginx实现负载均衡.assets/2-nginx.png)
