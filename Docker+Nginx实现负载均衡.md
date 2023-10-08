@@ -6,9 +6,17 @@
 
 ### 简易负载均衡架构图
 
-![基礎觀念系列] Web Server & Nginx — (2) | by 莫力全Kyle Mo | Starbugs Weekly 星巴哥技術專欄|  Medium](https://miro.medium.com/v2/resize:fit:1024/1*TrNJZqECEj0eVuJDeNKtNQ.png)
+![Load balancing using Nginx – Journals](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/nginx-load-balancing.png)
 
-![基礎觀念系列] Web Server & Nginx — (2) | by 莫力全Kyle Mo | Starbugs Weekly 星巴哥技術專欄|  Medium](https://miro.medium.com/v2/resize:fit:1024/1*TrNJZqECEj0eVuJDeNKtNQ.png)
+![image-20231006051043536](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/image-20231006051043536.png)
+
+![image-20231006050252719](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/image-20231006050252719.png)
+
+![image-20231006044041797](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/image-20231006044041797.png)
+
+![Load Balancing with NGINX Plus](https://www.nginx.com/wp-content/uploads/2017/09/NGINX-Plus-product-page_Load-Balancer@2x.png)
+
+![Prevent nginx from caching DNS for proxy](https://ercanermis.com/wp-content/webpc-passthru.php?src=https://ercanermis.com/wp-content/uploads/nginx_proxy.png&nocache=1)
 
 ![Load Balancing with NGINX Plus](./Docker+Nginx实现负载均衡.assets/NGINX-Plus-product-page_Load-Balancer@2x.png)
 
