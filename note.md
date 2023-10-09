@@ -1252,4 +1252,8 @@ docker run --name nginx-test -p 80:80 \
   -v C:/work/www/nginx/logs:/var/log/nginx \
    -v C:/data/www:/www \
     -v C:/work/www/nginx/conf:/etc/nginx/conf.d \
-     --privileged=true --link php-test:php -d f6d0749a6d13 
+     --privileged=true --link php-test:php -d nginx 
+
+
+
+docker run -d -p 3306:3306 --privileged=true -v /mysql/log:/var/log/mysql -v /mysql/data:/var/lib/mysql -v /mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456  --name mysql mysql
