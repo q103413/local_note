@@ -1263,3 +1263,16 @@ find ./ -name "*.conf" | xargs grep "mg_pages_dir"
 
 
 docker run -d -p 9001:9000 -p 9092:9092 --name minio -e "MINIO_ACCESS_KEY=minioadmin" -e "MINIO_SECRET_KEY=minioadmin" -v /c/data/minio/data:/data -v /c/data/minio/config:/root/.minio minio/minio server /data --console-address ":9000" -address ":9090"
+
+
+miss v3 oim
+
+cd /data/openim-server-master/scripts/ &&  sh ./stop-all.sh && sh ./start-all.sh 
+
+
+
+docker run -d --name mysql -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=wordpress mysql
+
+
+forrest
+VdjDkEr)Qj5EMzYpgO
