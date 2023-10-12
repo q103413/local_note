@@ -2,17 +2,11 @@
 
 # Docker实战：Docker安装WordPress，快速搭建自己的博客
 
-作者：郝光明2022-10-09 07:21:21
-
-[开发](https://www.51cto.com/developer)[架构](https://www.51cto.com/architecture)
-
-很多关于安装wordpress的文章会考虑直接在安装wordpress的同时配置mysql，很容易出现各种各样的问题，这里就不列举了。推荐采用我的这种方式。浏览器首次访问wordpress的同时进行配置mysql数据库。
-
 ### 1、WordPress介绍
 
 官网：https://wordpress.com/zh-cn/
 
-![图片](./利用docker部署一个wordpress.assets/d7c650897f0a59b1289912d8040b5e01ab188e.png)
+![image-20231013024142644](./利用docker部署一个wordpress.assets/image-20231013024142644.png)
 
 WordPress是一种基于php编程语言开发的CMS管理系统，WordPress有丰富的插件和模板，用户可以快速搭建一套功能十分强大的内容管理系统，使用WordPress可以做多种类型的网站，比如新闻发布网站、企业门户、个人技术博客等。
 
@@ -73,7 +67,7 @@ docker run -d -e WORDPRESS_DB_HOST=mysql:3306 --link mysql -p 8083:80 wordpress
 
 `wordpress`             wordpress镜像
 
-### 4.访问地址
+### 3.访问地址
 
 ```text
 用户地址：https://服务器ip:8083
@@ -81,17 +75,13 @@ docker run -d -e WORDPRESS_DB_HOST=mysql:3306 --link mysql -p 8083:80 wordpress
 管理地址：https://服务器ip:8083/wp-admin/
 ```
 
-复制
-
-### 5.异常问题解决
+### 4.异常问题解决
 
 url访问后，页面出现以下问题
 
 ```bash
 Error establishing a database connection
 ```
-
-复制
 
  解决办法 
 
@@ -118,11 +108,11 @@ apt-get install vim
 
 ![image-20231013003952868](./利用docker部署一个wordpress.assets/image-20231013003952868.png)
 
-四，浏览器访问地址：[49.233.216.163:8083/](http://49.233.216.163:8083/)
+四，浏览器访问
 
-输入你的公网ip+1080 测试是否可以正常访问。效果如下图：
+输入你的公网ip+:8083 测试是否可以正常访问。
 
-示例：127.0.0.1:1080；
+示例：[127.0.0.1::8083](http://127.0.0.1::8083/)；
 
 出现如下界面，证明安装成功
 
@@ -145,3 +135,25 @@ apt-get install vim
 登录后的管理主界面；
 
 ![image-20231013003426182](./利用docker部署一个wordpress.assets/image-20231013003426182.png)
+
+# 五、WordPress初学者入门教程: 什么是WordPress?
+
+如果你是第一次接触网站搭建，你可能会这些问题: “什么是WordPress?” “怎样用WordPress建立博客?” 或 “怎样用WordPress建立自己的网站或网店?” 简单的回答是：WordPress是一个可以让你简单地建立自己博客，网站，或电子网站商城的工具。也就是说，新手可以用WordPress来建立任何的网站 (如，[个人博客](https://www.jiustore.com/wordpress-blog/)，[生意网站](https://www.jiustore.com/business-website/)，个人网站，会员网站，[论坛](https://www.jiustore.com/bbpress-plugin/)，[电子商务网站](https://www.jiustore.com/woocommerce/)等等)。
+
+最好的事情是：WordPress是免费的。还有，你不需要任何的专业知识或网站设计知识，你可以从零开始学习WordPress。你只需要几个小时就可以学习用WordPress建站以及学会如何操作你的博客，网站，或网店。从现在起，博主就把你带进WordPress的魅力世界。
+
+### 什么是WordPress?
+
+WordPress是一种使用PHP语言开发的网站平台。目前，WordPress是最多人和最容易使用的网站建立工具 (或内容管理系统，英文是CMS或Content Management System)。![image-20231013023558652](./利用docker部署一个wordpress.assets/image-20231013023558652.png)
+
+### 还不太明白什么是WordPress？
+
+一般的网站都有后台管理的。例如，你注册了一个QQ空间，新浪博客，或百度空间，你需要登陆后才可以发布内容 (如，文章，照片，视频等等)。那么，这里所说的WordPress，其实就是一个提供网站后台的程序。当你安装WordPress后，你就拥有一个独立的网站管理后台。WordPress后台+Wordpress主题，就构成了一个完整的网站。登陆后台后，WordPress有过万的免费主题 (themes)。你可以选择自己喜欢的主题来展现自己的风格。
+
+### WordPress的操作简单
+
+其实，WordPress的操作是很简单，但是你需要看些教程。几个小时就可以自己学会如何使用WordPress。
+
+### 谁在用WordPress这个免费工具
+
+我们近些年建立的网站和网上商店都是用WordPress搭建的。现在很多的个人网站，独立博客，公司网站，会员网站都是用WordPress做的。就连纽约时报博客 (New York Times’ blogs)和CNN新闻博客 (CNN’s on-air personality blogs)也是采用WordPress。
