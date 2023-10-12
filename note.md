@@ -1105,12 +1105,6 @@ cd /data/Open-IM-Server/script/ && ./start_all.sh
 cd /data/Open-IM-Server/script/ && sh ./check_all.sh
 
 
-cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
-
-
-cd /data/Open-IM-Server/script/ && ./start_all.sh && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ &&  ./start_rpc_service.sh && ./check_all.sh && cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
-
-
 
 p.kwecznedite.com
 
@@ -1206,3 +1200,79 @@ docker cp ccbe4e42f5b8:/etc/nginx/conf.d/default.conf C:\work\www\nginx/conf/
 
 docker run --name nginx-config -p 80:80 -v C:\work\www\nginx/nginx.conf:/etc/nginx/nginx.conf  -v C:\work\www\nginx/logs:/var/log/nginx  -v C:\work\www\nginx/html:/usr/share/nginx/html  -v C:\work\www\nginx/conf:/etc/nginx/conf.d  --privileged=true -d nginx
 
+
+
+
+
+cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
+
+
+cd /data/Open-IM-Server/script/ && ./stop_all.sh && ./start_all.sh && cd /data/Open-IM-Enterprise/script/ && ./stop_all.sh && ./start_rpc_service.sh && cd /data/Open-IM-Server/script/ && ./check_all.sh && cd /data/Open-IM-Enterprise/script/ && ./check_all.sh
+
+
+
+docker run -d --name=es7 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.5.1
+
+
+mkdir -p C:/data/skywalking
+
+docker cp es7:/usr/share/elasticsearch/data C:/data/skywalking/
+docker cp es7:/usr/share/elasticsearch/logs C:/data/skywalking/
+docker rm -f es7
+docker run -d --name=es7 \
+  --restart=always \
+  -p 9200:9200 -p 9300:9300 \
+  -e "discovery.type=single-node" \
+  -v C:/data/skywalking/data:/usr/share/elasticsearch/data \
+  -v C:/data/skywalking/logs:/usr/share/elasticsearch/logs \
+elasticsearch:7.5.1
+
+
+
+docker run --name oap --restart always -d \
+--restart=always \
+-e TZ=Asia/Shanghai \
+-p 12800:12800 \
+-p 11800:11800 \
+--link es7:es7 \
+-e SW_STORAGE=elasticsearch \
+-e SW_STORAGE_ES_CLUSTER_NODES=es7:9200 \
+apache/skywalking-oap-server:6.6.0-es7
+
+
+docker run --name php-test -v C:/data/php/www:/www -p 9000:9000 -d 952da0932318
+
+
+docker run --name nginx-config -p 80:80 -v C:\work\www\nginx/nginx.conf:/etc/nginx/nginx.conf  -v C:\work\www\nginx/logs:/var/log/nginx  -v C:\work\www\nginx/html:/usr/share/nginx/html  -v C:\work\www\nginx/conf:/etc/nginx/conf.d  --privileged=true -d nginx
+
+
+
+docker run --name nginx-test -p 80:80 \
+ -v C:/work/www/nginx/nginx.conf:/etc/nginx/nginx.conf \
+  -v C:/work/www/nginx/logs:/var/log/nginx \
+   -v C:/data/www:/www \
+    -v C:/work/www/nginx/conf:/etc/nginx/conf.d \
+     --privileged=true --link php-test:php -d nginx 
+
+
+
+docker run -d -p 3306:3306 --privileged=true -v /mysql/log:/var/log/mysql -v /mysql/data:/var/lib/mysql -v /mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456  --name mysql mysql
+
+
+find ./ -name "*.conf" | xargs grep "mg_pages_dir"
+
+
+docker run -d -p 9001:9000 -p 9092:9092 --name minio -e "MINIO_ACCESS_KEY=minioadmin" -e "MINIO_SECRET_KEY=minioadmin" -v /c/data/minio/data:/data -v /c/data/minio/config:/root/.minio minio/minio server /data --console-address ":9000" -address ":9090"
+
+
+miss v3 oim
+
+cd /data/openim-server-master/scripts/ &&  sh ./stop-all.sh && sh ./start-all.sh 
+
+
+
+docker run -d --name mysql -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=wordpress mysql
+
+
+forrest
+VdjDkEr)Qj5EMzYpgO

@@ -6,6 +6,7 @@
 
 ### 简易负载均衡架构图
 
+<<<<<<< HEAD
 ![Load balancing using Nginx – Journals](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/nginx-load-balancing.png)
 
 ![image-20231006051043536](/Users/zhangwei/Documents/local_note/Docker+Nginx实现负载均衡.assets/image-20231006051043536.png)
@@ -18,6 +19,8 @@
 
 ![Prevent nginx from caching DNS for proxy](https://ercanermis.com/wp-content/webpc-passthru.php?src=https://ercanermis.com/wp-content/uploads/nginx_proxy.png&nocache=1)
 
+=======
+>>>>>>> 94152573d79d6f47dc4e6716b226403b96fa71d8
 ![Load Balancing with NGINX Plus](./Docker+Nginx实现负载均衡.assets/NGINX-Plus-product-page_Load-Balancer@2x.png)
 
 ![Prevent nginx from caching DNS for proxy](./Docker+Nginx实现负载均衡.assets/nginx_proxy.png)
