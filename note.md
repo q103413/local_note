@@ -1276,3 +1276,13 @@ docker run -d --name mysql -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=r
 
 forrest
 VdjDkEr)Qj5EMzYpgO
+
+
+Client ID: 1
+Client secret: KhiPwW6KpqLtW3HN2z9Zcg0XWc6Ge7o0jHLToEoZ
+
+
+
+Client ID: 2
+Client secret: WLZPwvHI3qnzPOJn01pZEFNQH3kwvHfvIilbwzXz
+
