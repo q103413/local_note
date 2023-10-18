@@ -1282,7 +1282,41 @@ Client ID: 1
 Client secret: KhiPwW6KpqLtW3HN2z9Zcg0XWc6Ge7o0jHLToEoZ
 
 
-
 Client ID: 2
 Client secret: WLZPwvHI3qnzPOJn01pZEFNQH3kwvHfvIilbwzXz
 
+
+
+docker tag vs:v1 cccc/vserver:v1 docker的用户名/dockerhub上创建的仓库名：版本号 （若无则默认为latest）
+
+
+docker push q103413/myserver:v1
+
+
+
+docker tag hello:v1 q103413/myserver:v1 
+
+
+q103413/myserver：版本号 （若无则默认为latest）
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-(uname -m)" -o /usr/local/bin/docker-compose
+
+作者：沉默魔导师LV7
+链接：https://www.jianshu.com/p/aaf9180b7c39
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+sudo rm /usr/local/bin/docker-compose
+
+
+Client ID: 1
+Client secret: tBFwcLa3hQ1uu7MnkpJJ9kqcXTtaYjs530ynZOpA
+
+
+Password grant client created successfully.
+Client ID: 2
+Client secret: bJ0hwrbQMLOTNggHZWlDZW5zUA2BDuP9CIt3o0qJ
+
+
+BASE_API: '"http://192.168.200.129/api/v1/admin/"',  //172.27.16.1是window主机的局域网IP
