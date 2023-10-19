@@ -2,10 +2,6 @@
 
 # 单机 Docker 部署 ELK（ElasticSearch、Kibana、Logstash）
 
-
-
-![elk-stack-elkb-diagram](./docker部署elk.assets/elk-stack-elkb-diagram-1697658697330-13.svg)
-
 # Docker 部署 ELK（ElasticSearch、Kibana、Logstash）
 
 ## 什么是ELK？
@@ -20,7 +16,21 @@ ELK是一个日志收集、切割、过滤、储存、展示的大型服务。�
 
 因为Logstash功能很多，占用系统资源过高，而有时我们只需要读取日志文件即可，所以将之前版本的Logstash中的file beats插件单独提取出来，也就是Beats。这样可以减少Logstash的部署实例，减轻服务压力。同时beats既可以输出到Logstash进一步处理，也可以直接输出到ES中储存。
 
-[![elk-stack-elkb-diagram](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/elk-stack-elkb-diagram.svg)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/elk-stack-elkb-diagram.svg)
+![elk-stack-elkb-diagram](./docker部署elk.assets/elk-stack-elkb-diagram-1697658697330-13.svg)
+
+
+
+
+
+### Filebeat
+
+ELK 协议栈的新成员，一个轻量级开源日志文件数据搜集器，基于 Logstash-Forwarder 源代码开发是对它的替代。在需要采集日志数据的服务上安装 Filebeat，并指定日志目录或日志文件后，Filebeat 就能读取日志文件数据，迅速发送到 Logstash 进行解析，或直接发送到 Elasticsearch 进行集中式存储和分析。
+
+### 架构图
+
+具体基于 Filebeat 的 ELK 分布式集中日志解决方案架构如图所示:
+
+![img](./docker部署elk.assets/be683c158a324bc2ad7795a44e81ba75tplv-k3u1fbpfcp-zoom-in-crop-mark1512000.webp)
 
 ## 部署
 
@@ -64,7 +74,9 @@ docker run -d --name es \
 
 部署完可以访问9200端口，如果出现以下内容即为部署成功
 
-[![image-1655397470893](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655397470893.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655397470893.png)
+![image-20231019020810887](./docker部署elk.assets/image-20231019020810887.png)
+
+![image-20231019191717545](./docker部署elk.assets/image-20231019191717545.png)
 
 ### 2. Kibana
 
@@ -87,7 +99,7 @@ docker run  -d \
 
 访问5601端口：
 
-[![image-1655398170534](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655398170534.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655398170534.png)
+![image-20231019195732031](./docker部署elk.assets/image-20231019195732031.png)
 
 ### 3. Logstash
 
@@ -100,7 +112,7 @@ docker run -d -u root \
   -v /data/ELK/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml \
   -v /data/ELK/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml \
   -v /data/ELK/logstash/pipe/:/usr/share/logstash/pipeline/ \
-  -v /data/ELK/testlogs/:/var/logs/ \
+  -v /data/ELK/logs/:/var/logs/ \
   --name logstash \
   --network=ELK \
   logstash:7.16.3
@@ -194,36 +206,30 @@ output {
 
 在kibana设置中选择 Stack Management
 
-[![image-1655399341796](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399341796.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399341796.png)
+![image-20231019194509767](./docker部署elk.assets/image-20231019194509767.png)
 
 左侧选择“索引模式”，右侧选择创建索引模式
 
-[![image-1655399429733](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399429733.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399429733.png)
+![image-20231019020616530](./docker部署elk.assets/image-20231019020616530.png)
 
 选择对应索引，然后创建
 
-[![image-1655399506293](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399506293.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399506293.png)
+![image-20231019194702786](./docker部署elk.assets/image-20231019194702786.png)
 
 点击左侧Discover
 
-[![image-1655399568935](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399568935.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399568935.png)
+![image-20231019194812772](./docker部署elk.assets/image-20231019194812772.png)
 
-[![image-1655399807106](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399807106.png)](https://dxytoll-img-1304942391.cos.ap-nanjing.myqcloud.com/img/blog/image-1655399807106.png)
+![image-20231019194911314](./docker部署elk.assets/image-20231019194911314.png)
 
+![Installing ELK Stack in Docker. Having Troubling Implementing Docker… | by  Shelvi Garg | Analytics Vidhya | Medium](./docker部署elk.assets/0D83ZpjexukNKQruA.png)
 
+![GitHub - sherifabdlnaby/elastdocker: 🐳 Elastic Stack (ELK) v8+ on Docker  with Compose. Pre-configured out of the box to enable Logging, Metrics,  APM, Alerting, ML, and SIEM features. Up with a Single Command.](./docker部署elk.assets/f2f2ca74-c2b6-44cd-911d-24dd66be8a9a.png)
 
-![image-20231019020810887](./docker部署elk.assets/image-20231019020810887.png)
+![与Elasticsearch Monitorizando, Logstash, Kibana, Grafana, 击败... |  博客Bujarra.com](./docker部署elk.assets/ELK-1.png)
 
+![ELK Stack Tutorial: What is Kibana, Logstash & Elasticsearch?](./docker部署elk.assets/082918_1504_ELKStackTut1.png)
 
+![ELK Stack - Elasticsearch, Logstash, and Kibana](./docker部署elk.assets/1588360254109.jpeg)
 
-
-
-![image-20231019020824492](./docker部署elk.assets/image-20231019020824492.png)
-
-
-
-![image-20231019020445461](./docker部署elk.assets/image-20231019020445461.png)
-
-![image-20231019020616530](./docker部署elk.assets/image-20231019020616530.png)
-
-![image-20231019020649851](./docker部署elk.assets/image-20231019020649851.png)
+![Elasticsearch, Logstash, and Kibana (ELK) Setup for Log Management | Upwork](./docker部署elk.assets/large.png)
