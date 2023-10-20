@@ -57,9 +57,9 @@ docker images
 
 ## ![image-20231020015248079](./docker上传镜像.assets/image-20231020015248079.png)
 
-## 4.docker hub 帐号在本地验证登陆
+## 4. 本地登录
 
-docker 本地登录
+docker hub 帐号在本地验证登陆
 
 ```shell
 docker login
@@ -67,7 +67,7 @@ docker login
 
 ![image-20231020021704074](./docker上传镜像.assets/image-20231020021704074.png)
 
-## 5.docker push 镜像到docker hub 的仓库
+## 5.push 镜像到docker hub 的仓库
 
 ```shell
 # docker push docker账号/仓库名称:tagname
@@ -95,13 +95,14 @@ docker inspect image
 
 ![img](./docker上传镜像.assets/1606616-20220322185007416-681271531.png)
 
-## pull 拉取镜像
+## 7.pull 拉取镜像
 
-拉取镜像使用docker pull 你自己的镜像名称
-
-```javascript
+```shell
 docker login
-docker pull user/Repositories:tag
+
+# docker rmi <hub-user>/<repo-name>:<tag>
+# docker pull 你自己的镜像名称
+docker pull <hub-user>/<repo-name>:<tag>
 ```
 
 ![image-20231020022420535](./docker上传镜像.assets/image-20231020022420535.png)
