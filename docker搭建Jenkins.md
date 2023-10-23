@@ -73,7 +73,7 @@ docker ps
 然后根据container ID进入容器
 
 ```shell
-sudo docker exec -it 6064 /bin/sh
+v
 ```
 
 然后获取密码
