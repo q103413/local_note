@@ -25,3 +25,9 @@ VMnet8：用于虚拟 NAT 网络下的虚拟交换机
 四、挂载宿主机
 
 https://www.cnblogs.com/xiaobaiskill/p/11298236.html
+
+
+
+
+
+systemctl restart network
