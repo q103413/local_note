@@ -45,11 +45,16 @@ vmware-hgfsclient
 mkdir -p /data
 
 # 3 用vmhgfs-fuse命令挂载目录
-vmhgfs-fuse .host:/data /mnt/hgfs
+vmhgfs-fuse .host:/ /mnt/hgfs
+vmhgfs-fuse .host:/ /newmnt/
 
 # 4 此刻 www 目录即 真正挂载到 虚拟机上了
 ls /mnt/hgfs
 # www
+
+#四、软连接至/home 目录下
+# ln -s /mnt/hgfs/www /home/www
+ln -s /hgfs/vmware/data /
 ```
 
 ### 3. 挂载共享文件夹到Centos中
@@ -67,5 +72,7 @@ ln -s /hgfs/vmware/data /
 ```
 
 https://blog.csdn.net/weixin_43493256/article/details/89295886
+
+![image-20231025010348727](./vmware搭建步骤.assets/image-20231025010348727.png)
 
 systemctl restart network
