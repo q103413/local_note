@@ -2,33 +2,7 @@
 
 ### 1.1. 系统环境
 
-做一件事要有个开始点，正确开始点对完成这件事很总要；很多时候在学习一个新的技能时，这个开始点很难选择。本项目的开始点就是**找到一个CentOS7系统**。为什么选择这个作为开始点呢？因为它能够更快速的构建这个项目，至于具体为什么，下面的内容会慢慢体现出来。
-
-本项目选择的是腾讯云的CVM系统，你也可以选择其他平台，或者自己的笔记本；当然，自己配置一个系统可能会有很多麻烦事，这个自己安装就会知道了。在安装操作系统时，选择公共镜像CentOS7就可以了。
-
-### 1.2. Docker环境
-
-上面选择CentOS7的一个好处就是能够很好的支持Docker运行环境，至于为什么选择Docker，就是应为简单、快速。在Docker Hub中有别人搭建好的Gitbook镜像，拉取下来就可以使用了。因此，这一步就是**安装Docker环境**。
-
-第一步要先安装Docker软件。需要提醒的是你的CentOS7需要联网，而且有一个好的yum源。这也是CVM的便捷之处。
-
-```
-yum install docker -y
-```
-
-第二步是要**启动docker和配置开机启动docker**.处理命令来启动之外，还可以使用/etc/init.d/rc.local等开机启动脚本来配置
-
-```
-systemctl start docker.service
-systemctl enable docker.service
-```
-
-如果使用的CentOS7以前的版本，可以使用service启动docker
-
-```
-service docker start
-chconfig --add docker
-```
+CentOS7系统 + Docker环境
 
 ### 1.3. GitBook容器
 
@@ -108,6 +82,66 @@ gitbook serve --lrport 35288 --port 4001 /path2/your_another_doc_dir/
 gitbook serve --lrport 35730 --port 4001
 ```
 
+### 1. 构建一个自定义的 镜像
+
+编写Dockerfile
+
+```dockerfile
+FROM node:7
+
+MAINTAINER Wenyu<admin@zhaowenyu.com>
+
+ARG VERSION=3.2.3
+
+LABEL version=$VERSION
+
+RUN npm install --global gitbook-cli &&\
+    gitbook fetch ${VERSION} &&\
+    npm cache clear &&\
+    rm -rf /tmp/*
+
+
+RUN wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin
+
+WORKDIR /srv/gitbook
+
+VOLUME /srv/gitbook /srv/html
+
+EXPOSE 4000 35729
+
+CMD /usr/local/bin/gitbook serve
+```
+
+有了Dockerfile，就可以创建镜像了：
+
+```shell
+docker build -t gitbook:v2 .
+```
+
+最后，可以通过以下命令创建容器：
+
+```shell
+docker run -itd --name="my_gitbook2" -h="my_gitbook2" -p 4000:4000 -p 35729:35729 -v /data/books/:/srv/gitbook/books 0e5c /bin/bash
+```
+
+GitBook 有如下命令，常用到的有前面6个：
+
+```\
+gitbook init ``//初始化目录文件``
+gitbook help ``//列出gitbook所有的命令``
+gitbook –help ``//输出gitbook-cli的帮助信息``
+gitbook build ``//生成静态网页``
+gitbook serve ``//生成静态网页并运行服务器``
+gitbook build –gitbook=2.0.1 ``//生成时指定gitbook的版本, 本地没有会先下载``
+gitbook ls ``//列出本地所有的gitbook版本``
+gitbook ls-remote ``//列出远程可用的gitbook版本``
+gitbook fetch 标签/版本号 ``//安装对应的gitbook版本``
+gitbook update ``//更新到gitbook的最新版本``
+gitbook uninstall 2.0.1 ``//卸载对应的gitbook版本``
+gitbook build –log=debug ``//指定log的级别``
+gitbook builid –debug ``//输出错误信息
+```
+
 ### 1.6. 后记
 
 上面使用了一个简单的方法搭建了gitbook服务，其实一开始我并没有这样想，开始我是想先安装nodejs，然后安装npm，然后安装cnpm，然后安装gitbook，然后....但是在安装gitbook的时候卡主了，官方给的npm安装gitbook在Linux和Windows上不能正确安装的，就是因为依赖MacOS上的fsevent模块。这个是错误不是告警，因此不能成功安装，这个应该是npm官方的npm依赖配置有问题，具体没有深究。
@@ -117,6 +151,8 @@ gitbook serve --lrport 35730 --port 4001
 - 1.给CVM的IP地址申请一个域名解析到该IP
 - 2.在这个CentOS7上搭建一个git Server，以后push md文件就使用git方式
 - 3.gitbook serve本身的并发不高，后续可以搭建一个nginx Web服务器代理。
+
+
 
 
 
