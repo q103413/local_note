@@ -72,7 +72,7 @@ docker ps
 
 ### 2、访问gitlab
 
-![image-20231026031014239](./docker部署gitlab.assets/image-20231026031014239.png)
+![image-20231026031745174](./docker部署gitlab.assets/image-20231026031745174.png)
 
 ![image-20231026030135926](./docker部署gitlab.assets/image-20231026030135926.png)
 
