@@ -1322,3 +1322,82 @@ Client secret: bJ0hwrbQMLOTNggHZWlDZW5zUA2BDuP9CIt3o0qJ
 BASE_API: '"http://192.168.200.129/api/v1/admin/"',  //172.27.16.1是window主机的局域网IP
 
 
+
+
+
+docker run -d \
+--restart=always \
+--name rabbitmq-node1 \
+--hostname rabbitmq-node1 \
+-e RABBITMQ_DEFAULT_USER="admin" \
+-e RABBITMQ_DEFAULT_PASS="admin" \
+-e RABBITMQ_ERLANG_COOKIE="1234567890qwertyuiopQWERTYUIOP" \
+-p 15672:15672 -p 5672:5672 -p 4369:4369 -p 25672:25672 \
+-v /etc/localtime:/etc/localtime:ro \
+-v /data/rabbitmq/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf \
+-v /data/rabbitmq/data:/var/lib/rabbitmq \
+rabbitmq:management
+
+
+# --add-host  添加hosts，主机名通信使用，连接master加入集群
+# RABBITMQ_DEFAULT_USER 默认用户
+# RABBITMQ_DEFAULT_PASS 默认密码
+# RABBITMQ_ERLANG_COOKIE 指定Cooike，集群多台服务器cookiee要一致
+
+docker run -d \
+--restart=always \
+--name rabbitmq-node2 \
+--hostname rabbitmq-node2 \
+--add-host=rabbitmq-node1:192.168.200.134 \
+--add-host=rabbitmq-node2:192.168.200.135 \
+--add-host=rabbitmq-node3:192.168.200.136 \
+-e RABBITMQ_DEFAULT_USER="admin" \
+-e RABBITMQ_DEFAULT_PASS="admin" \
+-e RABBITMQ_ERLANG_COOKIE="1234567890qwertyuiopQWERTYUIOP" \
+-p 15672:15672 -p 5672:5672 -p 4369:4369 -p 25672:25672 \
+-v /etc/localtime:/etc/localtime:ro \
+-v /data/rabbitmq/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf \
+-v /data/rabbitmq/data:/var/lib/rabbitmq \
+rabbitmq:management
+
+:3.8.9-management-alpine
+
+
+docker run -d \
+--restart=always \
+--name rabbitmq-node3 \
+--hostname rabbitmq-node3 \
+--add-host=rabbitmq-node1:192.168.200.134 \
+--add-host=rabbitmq-node2:192.168.200.135 \
+--add-host=rabbitmq-node3:192.168.200.136 \
+-e RABBITMQ_DEFAULT_USER="admin" \
+-e RABBITMQ_DEFAULT_PASS="admin" \
+-e RABBITMQ_ERLANG_COOKIE="1234567890qwertyuiopQWERTYUIOP" \
+-p 15672:15672 -p 5672:5672 -p 4369:4369 -p 25672:25672 \
+-v /etc/localtime:/etc/localtime:ro \
+-v /data/rabbitmq/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf \
+-v /data/rabbitmq/data:/var/lib/rabbitmq \
+rabbitmq:management
+
+:3.8.9-management-alpine
+
+
+# node2加入集群
+# 停止服务
+docker exec rabbitmq-node2 rabbitmqctl stop_app
+# 加入集群
+docker exec rabbitmq-node2 rabbitmqctl join_cluster rabbit@rabbitmq-node1
+# 启动服务
+docker exec rabbitmq-node2 rabbitmqctl start_app
+
+
+# node3加入集群
+docker exec rabbitmq-node3 rabbitmqctl stop_app
+docker exec rabbitmq-node3 rabbitmqctl join_cluster rabbit@rabbitmq-node1
+docker exec rabbitmq-node3 rabbitmqctl start_app
+
+
+# 当前加入集群都是磁盘节点，如果要加内存节点加入 --ram参数，如：
+docker exec rabbitmq-node3 rabbitmqctl stop_app
+docker exec rabbitmq-node3 rabbitmqctl join_cluster --ram rabbit@rabbitmq-node1
+docker exec rabbitmq-node3 rabbitmqctl start_app
