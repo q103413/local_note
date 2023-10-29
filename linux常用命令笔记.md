@@ -391,13 +391,14 @@ vim跳转到指定的行
 
 Linux 查看磁盘空间
 
-```
+```shell
 df -h
+df -hT
 ```
 
 - **df -hl**：查看磁盘剩余空间
 
-```
+```shell
 # du -sh *
 ```
 

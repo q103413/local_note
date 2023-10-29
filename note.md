@@ -1401,3 +1401,22 @@ docker exec rabbitmq-node3 rabbitmqctl start_app
 docker exec rabbitmq-node3 rabbitmqctl stop_app
 docker exec rabbitmq-node3 rabbitmqctl join_cluster --ram rabbit@rabbitmq-node1
 docker exec rabbitmq-node3 rabbitmqctl start_app
+
+
+mkdir -p /data/mysql/data
+
+docker run -d --name mysql --restart=always -e MYSQL_ROOT_PASSWORD=abcd@1e2e34  -p 3306:3306 -v /data/mysql/etc:/etc -v /data/mysql/data:/var/lib/mysql mysql:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+
+# docker exec -it mysql /bin/bash
+# mysql -u root -padmin@666
+mysql> create database jumpserver default charset 'utf8mb4';
+mysql> grant all on jumpserver.* to 'jumpserver'@'%' identified by 'abcd@1234';
+mysql> flush privileges;
+mysql> exit;
+# exit
+
+
+mkdir -p /data/redis/data
+docker run -d -it --name redis -p 6379:6379 -v /data/redis/data:/data --restart=always  --sysctl net.core.somaxconn=1024  redis:4.0.10 --requirepass "123456"
+
