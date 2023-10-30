@@ -1420,3 +1420,34 @@ mysql> exit;
 mkdir -p /data/redis/data
 docker run -d -it --name redis -p 6379:6379 -v /data/redis/data:/data --restart=always  --sysctl net.core.somaxconn=1024  redis:4.0.10 --requirepass "123456"
 
+
+ssh -p2222 admin666@admin666qq
+
+rpm -qa |grep yum
+ 作者：佛系的工具人 https://www.bilibili.com/read/cv19744994/ 出处：bilibili
+
+
+ --iptables=true：
+
+
+if [ "$SECRET_KEY" = "" ]; then SECRET_KEY=`cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 50`; echo "SECRET_KEY=$SECRET_KEY" >> ~/.bashrc; echo $SECRET_KEY; else echo $SECRET_KEY; fi
+ 
+if [ "$BOOTSTRAP_TOKEN" = "" ]; then BOOTSTRAP_TOKEN=`cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 16`; echo "BOOTSTRAP_TOKEN=$BOOTSTRAP_TOKEN" >> ~/.bashrc; echo $BOOTSTRAP_TOKEN; else echo $BOOTSTRAP_TOKEN; fi
+
+
+
+ docker run -d --name jumpserver -h jumpserver --restart=always  \
+    -v /data/jumpserver:/opt/jumpserver/data/media \
+    -p 80:80 \
+    -p 2222:2222 \
+    -e SECRET_KEY=$SECRET_KEY \
+    -e BOOTSTRAP_TOKEN=$BOOTSTRAP_TOKEN \
+    -e DB_HOST=192.168.200.134 \
+    -e DB_PORT=3306 \
+    -e DB_USER=jumpserver \
+    -e DB_PASSWORD="admin@666" \
+    -e DB_NAME=jumpserver \
+    -e REDIS_HOST=192.168.200.134 \
+    -e REDIS_PORT=6379 \
+    -e REDIS_PASSWORD="123456" \
+jumpserver/jms_all:latest
