@@ -1421,6 +1421,7 @@ mkdir -p /data/redis/data
 docker run -d -it --name redis -p 6379:6379 -v /data/redis/data:/data --restart=always  --sysctl net.core.somaxconn=1024  redis:4.0.10 --requirepass "123456"
 
 
+
 ssh -p2222 admin666@admin666qq
 
 rpm -qa |grep yum
@@ -1451,3 +1452,7 @@ if [ "$BOOTSTRAP_TOKEN" = "" ]; then BOOTSTRAP_TOKEN=`cat /dev/urandom | tr -dc 
     -e REDIS_PORT=6379 \
     -e REDIS_PASSWORD="123456" \
 jumpserver/jms_all:latest
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
