@@ -1456,3 +1456,56 @@ jumpserver/jms_all:latest
 
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+
+
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+ 
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+        #本地服务器加端口
+      - targets: ['localhost:9090']
+        labels:
+          instance: prometheus
+ 
+  - job_name: localhost-node-exporter
+    static_configs:
+        #监控本地服务器ip+端口，因为是本地docker启动，所以ip使用host.docker.internal
+      - targets: ['host.docker.internal:9100']
+        labels:
+          instance: localhost-node-exporter
+  - job_name: myaliyun
+    static_configs:
+      #监控远程服务器
+      - targets: ['192.168.200.135:9100']
+        labels:
+          instance: myaliyun
+
+
+
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+ 
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+        #本地服务器加端口
+      - targets: ['localhost:9090']
+        labels:
+          instance: prometheus
+ 
+  - job_name: localhost-node-exporter
+    static_configs:
+        #监控本地服务器ip+端口，因为是本地docker启动，所以ip使用host.docker.internal
+      - targets: ['host.docker.internal:9100']
+        labels:
+          instance: localhost-node-exporter
+  - job_name: myaliyun
+    static_configs:
+      #监控远程服务器
+      - targets: ['192.168.200.135:9100']
+        labels:
+          instance: myaliyun

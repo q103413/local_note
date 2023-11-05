@@ -14,7 +14,7 @@
 
 要停止所有的Docker实例，您可以使用以下命令：
 
-```
+```shell
 docker stop $(docker ps -aq)
 ```
 
@@ -24,7 +24,7 @@ docker stop $(docker ps -aq)
 
 要删除所有Docker实例（容器），您可以使用以下命令：
 
-```
+```shell
 docker rm -f $(docker ps -aq)
 ```
 
@@ -34,7 +34,7 @@ docker rm -f $(docker ps -aq)
 
 ## 删除镜像
 
-```
+```shell
 ## 没有打标签
 docker rmi [-f] $(docker images -q | awk '/^<none>/ { print $3 }')
 
@@ -63,7 +63,7 @@ docker的悬挂(dangling)文件系统与上面的原理类似，他是没有被�
 
 使用下面的命令可以清理
 
-```
+```shell
 docker rmi $(docker images -f "dangling=true" -q)
 ```
 
@@ -73,7 +73,7 @@ docker rmi $(docker images -f "dangling=true" -q)
 
 ## 删除所有的none镜像（慎用）会删除**有效的 none 镜像**
 
-```
+```shell
 docker images | grep none | awk '{print $3}' | xargs docker rmi
 ```
 
@@ -83,7 +83,7 @@ docker images | grep none | awk '{print $3}' | xargs docker rmi
 
 要导出镜像名称以"chenmins/suda"开头的Docker镜像，可以使用以下命令：
 
-```
+```shell
 docker save -o chenmins_suda_images.tar $(docker images "chenmins/suda*" -q)
 ```
 
@@ -97,23 +97,18 @@ docker save -o chenmins_suda_images.tar $(docker images "chenmins/suda*" -q)
 
 ## 镜像、容器、本地volumes占用了多少空间的基本的Docker方法：
 
-```
+```shell
 docker system df
+# 运行此命令获得按 Docker 组件分组的所有磁盘使用信息。
+
 ```
 
-运行此命令获得按 Docker 组件分组的所有磁盘使用信息。
-Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-TYPE TOTAL ACTIVE SIZE RECLAIMABLE
-Images 1 0 146MB 146MB (100%)
-Containers 0 0 0B 0B (0%)
-Local Volumes 0 0 0B 0B (0%)
+![image-20231101180845950](./docker实战维护-进阶版.assets/image-20231101180845950.png)
+
 
 ```
 docker system df -v
 ```
-
-
-
 
 ## 查看 Docker 镜像及其大小：
 
@@ -123,7 +118,7 @@ docker image ls
 
 它列出了系统上的所有 Docker 镜像，展示了一些详细信息，包括大小：
 
-```
+```shell
 docker image ls
 
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
@@ -145,7 +140,7 @@ docker ps --size
 
 ## 查看 SIZE 列：
 
-```
+```shell
 docker ps --size
 
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
@@ -167,7 +162,7 @@ docker镜像的获取、查看、删除、docker镜像管理、docker容器管�
 
 \# 查看docker镜像存储位置
 
-```
+```shell
 [root@localhost ~]# docker info|grep Root
 Docker Root Dir: /var/lib/docker
 [root@localhost ~]# ls /var/lib/docker/image/overlay2/imagedb/content/sha256/ -l
@@ -182,7 +177,7 @@ Docker Root Dir: /var/lib/docker
 -rw-------. 1 root root 1866 1月 4 14:45 d9e50bf288963ff3a78d1decfcd1deda5acd15a0e3094c9e4b317cf8299bd465
 \# 打开任意文件，里面记录的是镜像和容器之间的配置关系，以json的形式存储
 
-```
+```shell
 [root@localhost ~]# cat /var/lib/docker/image/overlay2/imagedb/content/sha256/5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6
 ```
 
@@ -217,7 +212,7 @@ docker run -it --rm centos:7.8.2003 bash
 
 ## 查看镜像
 
-```
+```shell
 # 查看全部镜像
 docker images
 # 查看具体镜像
