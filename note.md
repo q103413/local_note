@@ -1421,6 +1421,7 @@ mkdir -p /data/redis/data
 docker run -d -it --name redis -p 6379:6379 -v /data/redis/data:/data --restart=always  --sysctl net.core.somaxconn=1024  redis:4.0.10 --requirepass "123456"
 
 
+
 ssh -p2222 admin666@admin666qq
 
 rpm -qa |grep yum
@@ -1451,3 +1452,60 @@ if [ "$BOOTSTRAP_TOKEN" = "" ]; then BOOTSTRAP_TOKEN=`cat /dev/urandom | tr -dc 
     -e REDIS_PORT=6379 \
     -e REDIS_PASSWORD="123456" \
 jumpserver/jms_all:latest
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+
+
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+ 
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+        #本地服务器加端口
+      - targets: ['localhost:9090']
+        labels:
+          instance: prometheus
+ 
+  - job_name: localhost-node-exporter
+    static_configs:
+        #监控本地服务器ip+端口，因为是本地docker启动，所以ip使用host.docker.internal
+      - targets: ['host.docker.internal:9100']
+        labels:
+          instance: localhost-node-exporter
+  - job_name: myaliyun
+    static_configs:
+      #监控远程服务器
+      - targets: ['192.168.200.135:9100']
+        labels:
+          instance: myaliyun
+
+
+
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+ 
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+        #本地服务器加端口
+      - targets: ['localhost:9090']
+        labels:
+          instance: prometheus
+ 
+  - job_name: localhost-node-exporter
+    static_configs:
+        #监控本地服务器ip+端口，因为是本地docker启动，所以ip使用host.docker.internal
+      - targets: ['host.docker.internal:9100']
+        labels:
+          instance: localhost-node-exporter
+  - job_name: myaliyun
+    static_configs:
+      #监控远程服务器
+      - targets: ['192.168.200.135:9100']
+        labels:
+          instance: myaliyun

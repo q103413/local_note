@@ -76,3 +76,11 @@ https://blog.csdn.net/weixin_43493256/article/details/89295886
 ![image-20231025010348727](./vmware搭建步骤.assets/image-20231025010348727.png)
 
 systemctl restart network
+
+
+
+systemctl restart  docker
+
+
+
+d
