@@ -35,7 +35,7 @@ apt-get -y install wget
 
 ## 5、安装宝塔
 
-官网：[宝塔面板下载，免费全能的服务器运维软件](https://www.bt.cn/new/download.html)
+官网：宝塔面板下载，免费全能的服务器运维软件
 
 ```shell
 wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
