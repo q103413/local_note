@@ -1,1 +1,0 @@
-# Jenkins VS Gitlab CI/CD
