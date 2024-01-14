@@ -1,4 +1,4 @@
-## docker部署安装jenkins
+## docker部署jenkins
 
 ## Jenkins 简介
 
@@ -73,7 +73,7 @@ docker ps
 然后根据container ID进入容器
 
 ```shell
-v
+docker exec -it 6064 /bin/sh
 ```
 
 然后获取密码

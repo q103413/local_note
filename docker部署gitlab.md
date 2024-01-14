@@ -1,24 +1,21 @@
-# 使用docker快速部署gitlab
+# 使用Docker快速部署Gitlab
 
-## 一、说明
+## 一、gitlab是什么?
 
-- 现在公司内所有项目都使用gitlab
-- gitlab的升级越来越频繁了
-- gitlab的功能越来越丰富了
-- 日常我们需要做升级或者测试gitlab功能，可随时使用docker搭建一个gitlab服务器，避免操作生产环境
+gitlab是一个开源的git仓库管理软件，并提供web界面，方便管理git仓库。和github很相似，不过github暂时没有开源版本，项目必须托管到github官方网站，不能本地部署。很多公司考虑到安全费用等因素，搭建自己的gitlab服务器。下面我将一步一步教大家搭建自己的gitlab服务器。我使用的linux版本是centos7。
 
 ## 二、环境
 
-- 操作系统：windows 11
-- docker 版本：20.10.24
-- gitlab版本：15.11（2023/5/9最新版）
+- 操作系统：centos7
+- docker 版本：latest
+- gitlab版本：latest（2023/10/25最新版）
 
 ## 三、部署
 
 ### 1、创建目录
 
 ```shell
-# 在自己的任何一个盘，用powershell创建3个空白目录
+# 创建3个空白目录
 mkdir -p /docker/gitlab/etc
 mkdir -p /docker/gitlab/log
 mkdir -p /docker/gitlab/data
@@ -26,7 +23,7 @@ mkdir -p /docker/gitlab/data
 
 ### 2、拉取镜像
 
-```plain
+```shell
 # 拉取最新版gitlab
 docker pull gitlab/gitlab-ce
 ```
